@@ -4,3 +4,33 @@
   padding: 0;
   box-sizing: border-box;
 }
+/* Footer */
+footer {
+  position: fixed;
+  bottom: 0;
+  background-color: #141218;
+  width: 100%;
+}
+/* Nav */
+footer nav ul {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  list-style: none;
+  border-top: #ffffff solid 1px;
+}
+/* Nav item */
+footer nav ul li a{
+  text-decoration: none;
+  color: #ffffff;
+  font-size: 0.8rem;
+  display: flex;
+  flex-direction: column-reverse;
+  margin: 0.5em 0;
+  align-items: center;
+  fill: #ffffff;
+}
+ .active {
+  color: #BB86FC;
+  fill: #BB86FC;
+}
