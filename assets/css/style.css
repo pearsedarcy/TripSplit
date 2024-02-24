@@ -49,3 +49,11 @@ footer nav ul li a{
   color: #BB86FC;
   fill: #BB86FC;
 }
+@media screen and (min-width: 800px) {
+  a:hover {
+    fill: #bbbbbb;
+    color: #bbbbbb;
+    transform: scale(1.1);
+    transition: all 0.3s ease;
+  }  
+}
