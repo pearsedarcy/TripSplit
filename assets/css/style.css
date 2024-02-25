@@ -36,7 +36,6 @@ main {
   display: flex;
   flex-direction: column;
   padding: 1em 2em;
-  margin-bottom: 1em;
 }
 /* Main Section Header */
 .main-section-header {
@@ -51,6 +50,52 @@ main {
   align-items: center;
   gap: 1em;
 }
+/* Main Sections - Friends */
+#friends-section {
+  display: none;
+}
+#add-friends-button {
+  display: none;
+}
+/* Main Sections - Add Friends */
+/* #add-friends-section {
+  display: none;
+}
+#add-friends-submit-button {
+  display: none;
+} */
+/* Add Friends Form */
+ #add-friends-form {
+margin-top: 1em;
+}
+/* Input Label */
+fieldset {
+ border: #BB86FC solid 1px;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+  padding: 0 1em 0.3em 1em;
+}
+legend {
+  color: #BB86FC;
+  font-size: 0.8rem;
+  font-weight: 100;
+  margin-left: 10px;
+  padding: 0 10px;
+}
+/* Input */
+input {
+  height: 40px;
+  background-color: #1E1E1E;
+  color: #ffffff;
+  border: none;
+  font-size: 1.1em;
+}
+input:focus {
+  outline: none;
+  border: none;
+}
 /* Action buttons */
 button {
   background-color: #BB86FC;
@@ -63,6 +108,7 @@ button {
   font-weight: bold;
   display: flex;
   align-items: center;
+  margin: 1em 0;
 }
 button:hover {
   background-color: #a35afd;
