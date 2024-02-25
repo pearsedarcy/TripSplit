@@ -51,6 +51,30 @@ main {
   align-items: center;
   gap: 1em;
 }
+/* Action buttons */
+button {
+  background-color: #BB86FC;
+  color: #000;
+  border: none;
+  padding: 0.5em 1em;
+  border-radius: 20px;
+  cursor: pointer;
+  text-transform: uppercase;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+}
+button:hover {
+  background-color: #a35afd;
+  color: #fff;
+  transform: scale(0.9);
+  transition: all 0.3s ease;
+  fill: #ffffff;
+  border: #bbbbbb solid 1px;
+}
+.action-button {
+  align-self: flex-end;
+}
 /* Footer */
 footer {
   position: fixed;
