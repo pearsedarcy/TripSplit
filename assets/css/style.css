@@ -78,7 +78,7 @@ footer nav ul li a{
   align-items: center;
   fill: #ffffff;
 }
- .active {
+ .active a {
   color: #BB86FC;
   fill: #BB86FC;
 }
