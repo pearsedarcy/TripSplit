@@ -65,7 +65,7 @@ footer nav ul {
   justify-content: space-around;
   align-items: center;
   list-style: none;
-  border-top: #ffffff solid 1px;
+  border-top: #505050 solid 1px;
 }
 /* Nav item */
 footer nav ul li a{
