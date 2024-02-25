@@ -19,9 +19,42 @@ body {
   justify-content: start;
   height: 100vh;
 }
+/* Main */
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: start;
+  height: 100%;
+  width: 100%;
+  padding: 1em;
+}
+/* Main Section Wrapper */
+.main-section-wrapper {
+  background-color: #1E1E1E;
+  width: 100%;
+  height: 700px;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+}
+/* Main Section Header */
+.main-section-header {
+  display: flex;
+  justify-content: space-between;
+  padding: 1em 2em;
+  align-items: center;
+}
+/* Main Section Title */
+.section-title {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 1em;
+}
 /* Footer */
 footer {
-  position: fixed;
+  position: absolute;
   bottom: 0;
   background-color: #141218;
   width: 100%;
