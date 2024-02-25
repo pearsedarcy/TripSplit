@@ -26,6 +26,7 @@ main {
   justify-content: start;
   width: 100%;
   padding: 1em;
+  max-width: 600px;
 }
 /* Main Section Wrapper */
 .main-section-wrapper {
