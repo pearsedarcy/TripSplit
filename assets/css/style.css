@@ -52,12 +52,12 @@ main {
   gap: 1em;
 }
 /* Main Sections - Friends */
-#friends-section {
+/* #friends-section {
   display: none;
 }
 #add-friends-button {
   display: none;
-}
+} */
 /* Main Sections - Add Friends */
 /* #add-friends-section {
   display: none;
@@ -129,7 +129,9 @@ button:hover {
 }
 .action-button {
   align-self: flex-end;
+  margin-bottom: 55px;
 }
+
 /* Footer */
 footer {
   position: fixed;
