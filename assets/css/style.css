@@ -90,11 +90,19 @@ input {
   background-color: #1E1E1E;
   color: #ffffff;
   border: none;
-  font-size: 1.1em;
+  font-size: 1.5em;
 }
 input:focus {
   outline: none;
   border: none;
+}
+#add-friends-input {
+  width: 100%
+}
+#name-input {
+  display: flex;
+  justify-content: space-between;
+  gap: 0;
 }
 /* Action buttons */
 button {
