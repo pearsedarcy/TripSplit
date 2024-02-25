@@ -37,12 +37,12 @@ main {
   border-radius: 20px;
   display: flex;
   flex-direction: column;
+  padding: 1em 2em;
 }
 /* Main Section Header */
 .main-section-header {
   display: flex;
   justify-content: space-between;
-  padding: 1em 2em;
   align-items: center;
 }
 /* Main Section Title */
