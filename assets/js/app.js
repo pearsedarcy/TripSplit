@@ -13,6 +13,7 @@ function submitFriendsForm(event) {
     if (countFriends() < 5) {
       const newFriend = createFriendElement(friendName);
       friendsList.appendChild(newFriend);
+      getFriends();
       addFriendInput.value = '';
       errorMessage.textContent = '';
       niceLabel.style.borderColor = legend.style.color = '#b9b9b9';
@@ -45,6 +46,7 @@ function createFriendElement(name) {
   deleteButton.addEventListener('click', () => {
     alert('Are you sure you want to remove this friend?');
     newFriend.remove();
+    getFriends();
     displayErrorMessage('');
   });
   newFriend.appendChild(deleteButton);
@@ -106,6 +108,18 @@ addFriendsButton.addEventListener('click', () => {
   friendsListHeader.style.display = 'none';
   addFriendsHeader.style.display = 'flex';
 });
+
+// Loop through the Friends list items and add the names to the friends array
+const friends = [];
+function getFriends() {
+  const friends = [];
+  const friendsListItems = document.querySelectorAll('.friends-list li');
+  for (let i = 0; i < friendsListItems.length; i++) {
+    friends.push({ name: friendsListItems[i].textContent.trim().slice(0, -1) });
+  }
+  console.log(friends);
+  return friends;
+}
 
 // Handle Add Expense Form Submission
 const addExpenseForm = document.getElementById('add-expenses-form');
