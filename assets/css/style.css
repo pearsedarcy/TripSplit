@@ -78,21 +78,6 @@ main {
   display: flex;
   justify-content: space-between;
 }
-
-/* Main Sections - Friends */
-/* #friends-section {
-  display: none;
-}
-#add-friends-button {
-  display: none;
-} */
-/* Main Sections - Add Friends */
-/* #add-friends-section {
-  display: none;
-}
-#add-friends-submit-button {
-  display: none;
-} */
 /* Add Friends Form */
 #add-friends-form {
 margin-top: 1em;
