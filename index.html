@@ -91,12 +91,59 @@
           </svg>
           <h1>Add Expenses</h1>
         </div>
-      </header>
+      </header>  
+      <!-- Add Expenses Form -->
+      <form id="add-expenses-form" autocomplete="off">
+        <!-- Label for Input -->
+        <fieldset class="nice-label">
+          <legend>Title</legend>
+          <!-- Input Title -->
+          <div id="expense-input">
+            <input type="text" id="add-expenses-input" placeholder="Enter title" maxlength="30">
+          </div>
+        </fieldset>
+        <fieldset class="nice-label">
+          <legend>Price</legend>
+          <!-- Input Cost -->
+          <div id="cost-input">
+            <input type="number" id="add-cost-input" placeholder="Enter cost" maxlength="30">
+          </div>
+        </fieldset>
+        <fieldset class="nice-label">
+          <legend>Paid By</legend>
+          <!-- Input Cost -->
+          <div id="who-paid">
+            <select id="add-who-paid-input">
+              <option value="0">Friend 1</option>
+              <option value="1">Friend 2</option>
+              <option value="2">Friend 3</option>
+              <option value="3">Friend 4</option>
+              <option value="0">Friend 5</option>
+            </select>
+          </div>
+        </fieldset>
+        <fieldset class="nice-label">
+          <legend>Split between</legend>
+          <!-- Input Cost -->
+          <div id="split-input">
+          <input type="checkbox" id="friend-1" name="split" value="equal">
+          <label for="friend-1">Friend 1</label>
+          <input type="checkbox" id="split-custom" name="split" value="custom" >
+          <label for="split-custom">Custom</label>
+          </div>
+        </fieldset>
+      </form>
       <article class="expenses-list-article">
         <ul class="expenses-list">
         </ul>
-      </article>
+      </article>    
     </section>
+    <button type="submit" form="add-expenses-form" class="action-button">
+      <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24">
+        <path d="M382-240 154-468l57-57 171 171 367-367 57 57-424 424Z"/>
+      </svg>
+      Done
+    </button>
     </main>
   <!-- Footer -->
   <footer>
