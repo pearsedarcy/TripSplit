@@ -70,3 +70,32 @@ addFriendsInput.addEventListener('blur', function() {
   niceLabel.style.borderColor = legend.style.color = '#b9b9b9';
   displayErrorMessage('');
 });
+
+// Toggle the Add Friends form visibility and section header with action button
+const addFriendsCompleteBtn = document.getElementById('add-friends-complete-button');
+const addFriendsButton = document.getElementById('add-friends-button');
+const friendsListHeader = document.querySelector('#friends-list-header');
+const addFriendsHeader = document.querySelector('#add-friends-header');
+const deleteButton = document.querySelectorAll('.delete-button');
+
+addFriendsCompleteBtn.addEventListener('click', () => {
+  if (countFriends() === 0) {
+    displayErrorMessage('Please add at least one friend');
+  } else {
+    displayErrorMessage('');
+    addFriendsHeader.style.display = 'none';
+    addFriendsForm.style.display = 'none';
+    addFriendsCompleteBtn.style.display = 'none';
+    addFriendsButton.style.display = 'flex';
+    friendsListHeader.style.display = 'flex';
+    
+  }
+});
+
+addFriendsButton.addEventListener('click', () => {
+  addFriendsForm.style.display = 'block';
+  addFriendsCompleteBtn.style.display = 'flex';
+  addFriendsButton.style.display = 'none';
+  friendsListHeader.style.display = 'none';
+  addFriendsHeader.style.display = 'flex';
+});
