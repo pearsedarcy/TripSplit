@@ -51,6 +51,28 @@ main {
   align-items: center;
   gap: 1em;
 }
+/* Friends List */
+#friends-list-header {
+  display: none;
+}
+.friends-list-article {
+  display: flex;
+  flex-direction: column;
+  margin-top: 1em;
+}
+.friends-list-article ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5em;
+  font-size: 1.5em;
+}
+.friends-list-article ul li {
+  background-color: #141414;
+  padding: 0.5em;
+  border-radius: 10px;
+}
+
 /* Main Sections - Friends */
 /* #friends-section {
   display: none;
@@ -131,7 +153,9 @@ button:hover {
   align-self: flex-end;
   margin-bottom: 55px;
 }
-
+#add-friends-button {
+  display: none;
+}
 /* Footer */
 footer {
   position: fixed;
