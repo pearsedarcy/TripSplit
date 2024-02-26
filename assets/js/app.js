@@ -21,7 +21,7 @@ function submitFriendsForm(event) {
       addFriendInput.value = '';
     }
   } else {
-    displayErrorMessage('Please enter a friend name');
+    displayErrorMessage("Please enter a friend's name");
   }
 }
 // Create a new friend element
