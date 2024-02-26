@@ -37,6 +37,7 @@ function createFriendElement(name) {
     </svg>
   `;
   deleteButton.addEventListener('click', () => {
+    alert('Are you sure you want to remove this friend?');
     newFriend.remove();
     displayErrorMessage('');
   });
@@ -99,3 +100,4 @@ addFriendsButton.addEventListener('click', () => {
   friendsListHeader.style.display = 'none';
   addFriendsHeader.style.display = 'flex';
 });
+// A
