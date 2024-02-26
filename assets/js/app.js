@@ -1,14 +1,3 @@
-addEventListener();
-// Add event listener to the nav links
-function addEventListener() {
-let nav = document.querySelector('nav').firstElementChild.children;
-for (let i = 0; i < nav.length; i++) {
-  nav[i].addEventListener('click', function() {
-    console.log(`clicked  ${[i]}`);
-});
-}
-};
-
 /*
 === 1. Add Friend to the Friends list ===
   - 1.1 - Get the add friends form
