@@ -127,6 +127,13 @@ input:focus {
   justify-content: space-between;
   gap: 0;
 }
+.error-message {
+  color: #ff0000;
+  font-size: 14px;
+  margin-top: 0.3em;
+  font-weight: 100;
+  margin-left: 1em;
+}
 /* Action buttons */
 button {
   background-color: #BB86FC;
