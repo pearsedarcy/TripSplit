@@ -15,13 +15,12 @@ for (let i = 0; i < nav.length; i++) {
   - 1.2 -Add event listener to the form
   - 1.3 -Prevent the default form submission
   - 1.4 -Get the add friends form name input, with the id of 'add-friends-input'
-  - 1.5 -Get the add friends form submit button, with the id of 'add-friend-input-plus'
-  - 1.6 -Get UL with the class of 'friends
-  - 1.7 -Create new list item
-  - 1.8 -Create text node for new friend
-  - 1.9 -Append new friend name to new friend list item
-  - 1.10 -Append new friend list item to form friend list
-  - 1.11 -Clear the input field
+  - 1.5 -Get UL with the class of 'friends
+  - 1.6 -Create new list item
+  - 1.7 -Create text node for new friend
+  - 1.8 -Append new friend name to new friend list item
+  - 1.9 -Append new friend list item to form friend list
+  - 1.10 -Clear the input field
     TODO Change the color of the input field border when clicked, focused
     TODO Prevent empty form submission, add a validation to the form
     TODO Add a delete button to the list items
@@ -39,18 +38,16 @@ function submitFriendForm(event){
   event.preventDefault();
   // -1.4 -
   const addFriendInput = document.querySelector('#add-friends-input');
-  //  -1.5 -
-  const addFriendInputBtn = document.querySelector('#add-friend-input-plus');
-  //  -1.6 -
+  // -1.5 -
   const friendsList = document.querySelector('.friends-list');
-  // -1.7 -
+  // -1.6 -
   const newFriend = document.createElement('li');
-  // -1.8 -
+  // -1.7 -
   const newFriendName = document.createTextNode(addFriendInput.value);
-  // -1.9 -
+  // -1.8 -
   newFriend.appendChild(newFriendName);
-  // -1.10 -
+  // -1.9 -
   friendsList.appendChild(newFriend);
-  // -1.11 -
+  // -1.10 -
   addFriendInput.value = '';
 }
