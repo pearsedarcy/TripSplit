@@ -106,4 +106,53 @@ addFriendsButton.addEventListener('click', () => {
   friendsListHeader.style.display = 'none';
   addFriendsHeader.style.display = 'flex';
 });
-// A
+
+// Handle Add Expense Form Submission
+const addExpenseForm = document.getElementById('add-expenses-form');
+const expenseNameInput = document.getElementById('expense-title-input');
+const expenseAmountInput = document.getElementById('expense-cost-input');
+const paidByInput = document.getElementById('expense-paid-by-input');
+
+// Add event listener to the form
+addExpenseForm.addEventListener('submit', submitExpenseForm);
+
+// Submit the expense form
+function submitExpenseForm(event) {
+  event.preventDefault();
+  const expenseName = expenseNameInput.value.trim();
+  const expenseAmount = expenseAmountInput.value.trim();
+  console.log(expenseAmount);
+  console.log(expenseName);
+  const paidBy = paidByInput.value.trim();
+  console.log(paidBy);
+  if (expenseName !== '' && expenseAmount !== '' && paidBy !== '') {
+    const newExpense = createExpenseElement(expenseName, expenseAmount, paidBy);
+    addExpenseForm.reset();
+    displayExpense(newExpense);
+  } else {
+    alert('Please fill in all the fields');
+  }
+}
+
+// Create a new expense element
+function createExpenseElement(name, amount, paidBy) {
+  const newExpense = {
+    name,
+    amount,
+    paidBy
+  };
+  return newExpense;
+}
+
+// Display the expense
+function displayExpense(expense) {
+  const expenseList = document.querySelector('.expenses-list');
+  const newExpense = document.createElement('li');
+  newExpense.innerHTML = `
+    <span class="expense-title">${expense.name}</span>
+    <span class="expense-cost">${expense.amount}</span>
+    <span class="expense-paid-by">${expense.paidBy}</span>
+  `;
+  expenseList.appendChild(newExpense);
+}
+
