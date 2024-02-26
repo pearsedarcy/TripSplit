@@ -129,16 +129,17 @@ function submitExpenseForm(event) {
     const newExpense = createExpenseElement(expenseName, expenseAmount, paidBy);
     addExpenseForm.reset();
     displayExpense(newExpense);
+    getExpenses();
   } else {
     alert('Please fill in all the fields');
   }
 }
 
 // Create a new expense element
-function createExpenseElement(name, amount, paidBy) {
+function createExpenseElement(title, cost, paidBy) {
   const newExpense = {
-    name,
-    amount,
+    title,
+    cost,
     paidBy
   };
   return newExpense;
@@ -149,10 +150,27 @@ function displayExpense(expense) {
   const expenseList = document.querySelector('.expenses-list');
   const newExpense = document.createElement('li');
   newExpense.innerHTML = `
-    <span class="expense-title">${expense.name}</span>
-    <span class="expense-cost">${expense.amount}</span>
+    <span class="expense-title">${expense.title}</span>
+    <span class="expense-cost">${expense.cost}</span>
     <span class="expense-paid-by">${expense.paidBy}</span>
   `;
   expenseList.appendChild(newExpense);
 }
 
+// Create an array to store the expense details
+const expenses = [];
+
+// Add the expense details to the expenses array
+function getExpenses() {
+  const expenses = [];
+  const expenseListItems = document.querySelectorAll('.expenses-list li');
+  for (let i = 0; i < expenseListItems.length; i++) {
+    expenses.push({
+      expense: expenseListItems[i].querySelector('.expense-title').textContent.trim(),
+      cost: expenseListItems[i].querySelector('.expense-cost').textContent.trim(),
+      paidBy: expenseListItems[i].querySelector('.expense-paid-by').textContent.trim()
+    });
+  }
+  console.log(expenses);
+  return expenses;
+}
