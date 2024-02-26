@@ -95,9 +95,26 @@ main {
   color: #ffffff;
   order: -1;
 }
-/* Add Friends Form */
-#add-friends-form {
-margin-top: 1em;
+form {
+  margin-top: 1em;
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+}
+select {
+  height: 40px;
+  background-color: #1E1E1E;
+  color: #ffffff;
+  border: none;
+  font-size: 1em;
+  padding: 0 0;
+}
+option {
+  background-color: #1E1E1E;
+  color: #ffffff;
+  border: none;
+  font-size: 1em;
+  padding: 0 1em;
 }
 /* Input Label */
 fieldset {
