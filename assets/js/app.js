@@ -1,42 +1,39 @@
-/*
-=== 1. Add Friend to the Friends list ===
-  - 1.1 - Get the add friends form
-  - 1.2 -Add event listener to the form
-  - 1.3 -Prevent the default form submission
-  - 1.4 -Get the add friends form name input, with the id of 'add-friends-input'
-  - 1.5 -Get UL with the class of 'friends
-  - 1.6 -Create new list item
-  - 1.7 -Create text node for new friend
-  - 1.8 -Append new friend name to new friend list item
-  - 1.9 -Append new friend list item to form friend list
-  - 1.10 -Clear the input field
-    TODO Change the color of the input field border when clicked, focused
-    TODO Prevent empty form submission, add a validation to the form
-    TODO Add a delete button to the list items
-    TODO Add a message when the list is empty
-    TODO Limit the number of friends to add
-*/
-
-// -1.1 - 
+// Get all the elements Friends List and Friends Form Elements
 const addFriendsForm = document.getElementById('add-friends-form');
-// -1.2 -
-addFriendsForm.addEventListener('submit', submitFriendForm);
-// Main function to submit the form
-function submitFriendForm(event){
-  // -1.3 -
+const addFriendInput = document.querySelector('#add-friends-input');
+const friendsList = document.querySelector('.friends-list');
+const errorMessage = document.querySelector('#friends-list-error');
+// Add event listener to the form
+addFriendsForm.addEventListener('submit', submitFriendsForm);
+// Add friend to the list
+function submitFriendsForm(event) {
   event.preventDefault();
-  // -1.4 -
-  const addFriendInput = document.querySelector('#add-friends-input');
-  // -1.5 -
-  const friendsList = document.querySelector('.friends-list');
-  // -1.6 -
+  const friendName = addFriendInput.value.trim();
+  if (friendName !== '') {
+    if (countFriends() < 5) {
+      const newFriend = createFriendElement(friendName);
+      friendsList.appendChild(newFriend);
+      addFriendInput.value = '';
+      errorMessage.textContent = '';
+    } else {
+      displayErrorMessage('You can only add up to 5 friends');
+      addFriendInput.value = '';
+    }
+  } else {
+    displayErrorMessage('Please enter a friend name');
+  }
+}
+// Create a new friend element
+function createFriendElement(name) {
   const newFriend = document.createElement('li');
-  // -1.7 -
-  const newFriendName = document.createTextNode(addFriendInput.value);
-  // -1.8 -
-  newFriend.appendChild(newFriendName);
-  // -1.9 -
-  friendsList.appendChild(newFriend);
-  // -1.10 -
-  addFriendInput.value = '';
+  newFriend.textContent = name;
+  return newFriend;
+}
+// Count the number of friends
+function countFriends() {
+  return document.querySelectorAll('.friends-list li').length;
+}
+// Display error message
+function displayErrorMessage(message) {
+  errorMessage.textContent = message;
 }
