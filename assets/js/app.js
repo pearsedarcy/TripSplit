@@ -28,6 +28,12 @@ function submitFriendsForm(event) {
 function createFriendElement(name) {
   const newFriend = document.createElement('li');
   newFriend.textContent = name;
+  // Add a profile picture to the friend element
+  const profilePicture = document.createElement('div');
+  profilePicture.classList.add('profile-picture');
+  profilePicture.style.backgroundColor = `#${Math.floor(Math.random()*16777215).toString(16)}`;
+  profilePicture.textContent = name.charAt(0).toUpperCase();
+  newFriend.appendChild(profilePicture);
   // Create a delete button
   const deleteButton = document.createElement('a');
   deleteButton.classList.add('delete-button');
