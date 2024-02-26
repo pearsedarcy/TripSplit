@@ -14,6 +14,7 @@ function submitFriendsForm(event) {
       const newFriend = createFriendElement(friendName);
       friendsList.appendChild(newFriend);
       getFriends();
+      addFriendsToSelect();
       addFriendInput.value = '';
       errorMessage.textContent = '';
       niceLabel.style.borderColor = legend.style.color = '#b9b9b9';
@@ -187,4 +188,25 @@ function getExpenses() {
   }
   console.log(expenses);
   return expenses;
+}
+
+
+// Dynamically add the friends to the paid by select input
+const paidBySelect = document.getElementById('expense-paid-by-input');
+function addFriendsToSelect() {
+  const friends = getFriends();
+  for (let i = 0; i < friends.length; i++) {
+    const option = document.createElement('option');
+    option.value = friends[i].name;
+    option.textContent = friends[i].name;
+    paidBySelect.appendChild(option);
+    // Remove the duplicate options
+    for (let j = 0; j < paidBySelect.options.length; j++) {
+      for (let k = j + 1; k < paidBySelect.options.length; k++) {
+        if (paidBySelect.options[j].value === paidBySelect.options[k].value) {
+          paidBySelect.remove(k);
+        }
+      }
+    }
+  }
 }
