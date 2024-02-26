@@ -1,4 +1,4 @@
-// Get all the elements Friends List and Friends Form Elements
+// Get all the Friends List and Friends Form Elements
 const addFriendsForm = document.getElementById('add-friends-form');
 const addFriendInput = document.querySelector('#add-friends-input');
 const friendsList = document.querySelector('.friends-list');
