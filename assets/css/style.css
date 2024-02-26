@@ -119,7 +119,7 @@ input {
   background-color: #1E1E1E;
   color: #ffffff;
   border: none;
-  font-size: 1.5em;
+  font-size: 1em;
 }
 input:focus {
   outline: none;
