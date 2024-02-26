@@ -56,7 +56,7 @@
           <legend>Name</legend>
           <!-- Input Name -->
           <div id="name-input">
-            <input type="text" id="add-friends-input" placeholder="Enter a friend's name" maxlength="30">
+            <input name="friends-name" type="text" id="add-friends-input" placeholder="Enter a friend's name" maxlength="30">
             <input type="submit" name="add-friends-input" id="add-friend-input-plus" value="+">
           </div>
         </fieldset>
@@ -98,27 +98,27 @@
         <fieldset class="nice-label">
           <legend>Title</legend>
           <!-- Input Title -->
-          <div id="expense-input">
-            <input type="text" id="add-expenses-input" placeholder="Enter title" maxlength="30">
+          <div id="expense-title">
+            <input name="expense-title-input" type="text" id="expense-title-input" placeholder="Enter title" maxlength="30">
           </div>
         </fieldset>
         <fieldset class="nice-label">
           <legend>Cost</legend>
           <!-- Input Cost -->
-          <div id="cost-input">
-            <input type="number" id="add-cost-input" placeholder="Enter cost" maxlength="30">
+          <div id="expense-cost">
+            <input name="expense-cost-input" type="number" id="expense-cost-input" placeholder="Enter cost" min="0" step="0.01" max="10000000">
           </div>
         </fieldset>
         <fieldset class="nice-label">
           <legend>Paid By</legend>
           <!-- Input Cost -->
-          <div id="who-paid">
-            <select id="add-who-paid-input">
-              <option value="0">Friend 1</option>
-              <option value="1">Friend 2</option>
-              <option value="2">Friend 3</option>
-              <option value="3">Friend 4</option>
-              <option value="0">Friend 5</option>
+          <div id="expense-paid-by">
+            <select id="expense-paid-by-input">
+              <option value="1">Friend 1</option>
+              <option value="2">Friend 2</option>
+              <option value="3">Friend 3</option>
+              <option value="4">Friend 4</option>
+              <option value="5">Friend 5</option>
             </select>
           </div>
         </fieldset>
