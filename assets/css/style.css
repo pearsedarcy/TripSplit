@@ -79,6 +79,7 @@ main {
   border-radius: 10px;
   display: flex;
   justify-content: space-between;
+  align-items: center;
 }
 /* Add Friends Form */
 #add-friends-form {
