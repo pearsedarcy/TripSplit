@@ -15,6 +15,7 @@ function submitFriendsForm(event) {
       friendsList.appendChild(newFriend);
       addFriendInput.value = '';
       errorMessage.textContent = '';
+      niceLabel.style.borderColor = legend.style.color = '#b9b9b9';
     } else {
       displayErrorMessage('You can only add up to 5 friends');
       addFriendInput.value = '';
@@ -49,4 +50,23 @@ function countFriends() {
 // Display error message
 function displayErrorMessage(message) {
   errorMessage.textContent = message;
+  if (message !== '') {
+    niceLabel.style.borderColor = legend.style.color = 'red';
+  } else {
+    niceLabel.style.borderColor = legend.style.color = '#b9b9b9';
+  }
 }
+
+// Change border color of input on focus and blur
+const addFriendsInput = document.getElementById('add-friends-input');
+const niceLabel = document.querySelector('.nice-label');
+const legend = document.querySelector('legend');
+
+addFriendsInput.addEventListener('focus', function() {
+  niceLabel.style.borderColor = legend.style.color =  '#BB86FC';
+});
+
+addFriendsInput.addEventListener('blur', function() {
+  niceLabel.style.borderColor = legend.style.color = '#b9b9b9';
+  displayErrorMessage('');
+});
