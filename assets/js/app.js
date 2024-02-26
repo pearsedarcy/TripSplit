@@ -86,7 +86,6 @@ const addFriendsCompleteBtn = document.getElementById('add-friends-complete-butt
 const addFriendsButton = document.getElementById('add-friends-button');
 const friendsListHeader = document.querySelector('#friends-list-header');
 const addFriendsHeader = document.querySelector('#add-friends-header');
-const deleteButton = document.querySelectorAll('.delete-button');
 
 addFriendsCompleteBtn.addEventListener('click', () => {
   if (countFriends() === 0) {
