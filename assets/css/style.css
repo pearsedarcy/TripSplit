@@ -99,7 +99,7 @@ margin-top: 1em;
 }
 /* Input Label */
 fieldset {
-  border: #BB86FC solid 1px;
+  border: #b9b9b9 solid 1px;
   border-radius: 5px;
   display: flex;
   flex-direction: column;
@@ -107,7 +107,7 @@ fieldset {
   padding: 0 1em 0.3em 1em;
 }
 legend {
-  color: #BB86FC;
+  color: #b9b9b9;
   font-size: 0.8rem;
   font-weight: 100;
   margin-left: 10px;
