@@ -40,7 +40,7 @@ main {
   border-radius: 20px;
   display: flex;
   flex-direction: column;
-  padding: 1em 2em;
+  padding: 1em 1em;
 }
 /* Main Section Header */
 .main-section-header {
