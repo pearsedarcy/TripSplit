@@ -148,6 +148,7 @@ function submitExpenseForm(event) {
     getExpenses();
     calculateTotalSpent();
     calculateTotalSpentByEachFriend();
+    displayTotalSpentByEachFriend();
   } else {
     alert('Please fill in all the fields');
   }
@@ -260,4 +261,20 @@ function calculateTotalSpentByEachFriend() {
   }
   console.log(TotalSpentByEachFriend);
   return TotalSpentByEachFriend;
+}
+
+// Display the TotalSpentByEachFriend
+function displayTotalSpentByEachFriend() {
+  const TotalSpentByEachFriend = calculateTotalSpentByEachFriend();
+  const totalsList = document.querySelector('.totals-list');
+  totalsList.innerHTML = '';
+  for (let i = 0; i < TotalSpentByEachFriend.length; i++) {
+    const newtotals = document.createElement('li');
+    newtotals.innerHTML = `
+      <span class="totals-name">${TotalSpentByEachFriend[i].name}</span>
+      <p class="has-spent">has spent</p>
+      <span class="totals-amount">€${TotalSpentByEachFriend[i].total}</span>
+    `;
+    totalsList.appendChild(newtotals);
+  }
 }
