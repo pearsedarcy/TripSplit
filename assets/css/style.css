@@ -24,6 +24,24 @@ a {
   display: flex;
   align-items: center;
 }
+ul {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+}
+li  {
+  background-color: #141414;
+  padding: 0.5em;
+  border-radius: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+article {
+  display: flex;
+  flex-direction: column;
+  margin-top: 1em;
+}
 /* Main */
 main {
   display: flex;
@@ -60,11 +78,6 @@ main {
 /* Friends List */
 #friends-list-header {
   display: none;
-}
-.friends-list-article {
-  display: flex;
-  flex-direction: column;
-  margin-top: 1em;
 }
 .friends-list-article ul {
   list-style: none;
@@ -195,7 +208,7 @@ button:hover {
 footer {
   position: fixed;
   bottom: 0;
-  background-color: #141218;
+  background-color: #0f0f0f;
   width: 100%;
 }
 /* Nav */
@@ -205,6 +218,18 @@ footer nav ul {
   align-items: center;
   list-style: none;
   border-top: #505050 solid 1px;
+}
+/* Nav List */
+.nav-list {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+  padding: 0.5em 0;
+}
+.nav-list li {
+  background-color: #00000000;
 }
 /* Nav item */
 footer nav ul li a{
@@ -216,6 +241,7 @@ footer nav ul li a{
   margin: 0.5em 0;
   align-items: center;
   fill: #ffffff;
+  
 }
  .active a {
   color: #BB86FC;
