@@ -147,6 +147,7 @@ function submitExpenseForm(event) {
     displayExpense(newExpense);
     getExpenses();
     calculateTotalSpent();
+    calculateTotalSpentByEachFriend();
   } else {
     alert('Please fill in all the fields');
   }
@@ -239,3 +240,24 @@ function calculateTotalSpent() {
   console.log(totalSpent);
   return totalSpent;
 } 
+
+// Calculate the total amount each friend has spent
+function calculateTotalSpentByEachFriend() {
+  const friends = getFriends();
+  const expenses = getExpenses();
+  const TotalSpentByEachFriend = [];
+  for (let i = 0; i < friends.length; i++) {
+    let total = 0;
+    for (let j = 0; j < expenses.length; j++) {
+      if (expenses[j].paidBy === friends[i].name) {
+        total += parseInt(expenses[j].cost);
+      }
+    }
+    TotalSpentByEachFriend.push({
+      name: friends[i].name,
+      total
+    });
+  }
+  console.log(TotalSpentByEachFriend);
+  return TotalSpentByEachFriend;
+}
