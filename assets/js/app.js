@@ -276,7 +276,7 @@ function displayTotalSpentByEachFriend() {
     const newtotals = document.createElement('li');
     newtotals.innerHTML = `
       <span class="totals-name">${TotalSpentByEachFriend[i].name}</span>
-      <p class="has-spent">has spent</p>
+      <p class="action-word">has spent</p>
       <span class="totals-amount">€${TotalSpentByEachFriend[i].total}</span>
     `;
     totalsList.appendChild(newtotals);
@@ -306,11 +306,11 @@ function calculateAmountOwed() {
       }
     }
     if (total < 0) {
-      total = `owes €${Math.abs(total).toFixed(2)}`;
+      total = `<p class="action-word">owes</p> €${Math.abs(total).toFixed(2)}`;
     } else if (total > 0) {
-      total = `is owed €${Math.abs(total).toFixed(2)}`;
+      total = `<p class="action-word">is owed</p> €${Math.abs(total).toFixed(2)}`;
     } else {
-      total = 'is all settled up';
+      total = '<p class="action-word">is all settled up</p>';
     }
     amountOwed.push({
       name: friends[i].name,
@@ -330,9 +330,7 @@ function displayAmountOwed() {
     const newOwed = document.createElement('li');
     newOwed.innerHTML = `
       <span class="owed-name">${amountOwed[i].name}</span>
-      <p class="owes">
       <span class="owed-amount">${amountOwed[i].total}</span>
-      </p>
     `;
     balanceList.appendChild(newOwed);
   }
