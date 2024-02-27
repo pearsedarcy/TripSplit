@@ -151,6 +151,7 @@ function submitExpenseForm(event) {
     displayTotalSpentByEachFriend();
     divideTotalSpentByFriends();
     calculateAmountOwed();
+    displayAmountOwed();
   } else {
     alert('Please fill in all the fields');
   }
@@ -317,4 +318,21 @@ function calculateAmountOwed() {
   }
   console.log(amountOwed);
   return amountOwed;
+}
+
+// Display the amount each friend owes or is owed
+function displayAmountOwed() {
+  const amountOwed = calculateAmountOwed();
+  const balanceList = document.querySelector('.balance-list');
+  balanceList.innerHTML = '';
+  for (let i = 0; i < amountOwed.length; i++) {
+    const newOwed = document.createElement('li');
+    newOwed.innerHTML = `
+      <span class="owed-name">${amountOwed[i].name}</span>
+      <p class="owes">
+      <span class="owed-amount">${amountOwed[i].total}</span>
+      </p>
+    `;
+    balanceList.appendChild(newOwed);
+  }
 }
