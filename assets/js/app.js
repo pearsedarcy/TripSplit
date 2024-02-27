@@ -150,6 +150,7 @@ function submitExpenseForm(event) {
     calculateTotalSpentByEachFriend();
     displayTotalSpentByEachFriend();
     divideTotalSpentByFriends();
+    calculateAmountOwed();
   } else {
     alert('Please fill in all the fields');
   }
@@ -287,4 +288,33 @@ function divideTotalSpentByFriends() {
   const dividedTotal = (totalSpent / friends.length).toFixed(2);
   console.log(dividedTotal);
   return dividedTotal;
+}
+
+// Calculate the amount each friend owes or is owed
+function calculateAmountOwed() {
+  const friends = getFriends();
+  const TotalSpentByEachFriend = calculateTotalSpentByEachFriend();
+  const dividedTotal = divideTotalSpentByFriends();
+  const amountOwed = [];
+  for (let i = 0; i < friends.length; i++) {
+    let total = 0;
+    for (let j = 0; j < TotalSpentByEachFriend.length; j++) {
+      if (friends[i].name !== TotalSpentByEachFriend[j].name) {
+        total += dividedTotal - TotalSpentByEachFriend[j].total;
+      }
+    }
+    if (total < 0) {
+      total = `owes €${Math.abs(total).toFixed(2)}`;
+    } else if (total > 0) {
+      total = `is owed €${Math.abs(total).toFixed(2)}`;
+    } else {
+      total = 'is all settled up';
+    }
+    amountOwed.push({
+      name: friends[i].name,
+      total
+    });
+  }
+  console.log(amountOwed);
+  return amountOwed;
 }
