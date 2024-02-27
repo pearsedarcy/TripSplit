@@ -48,7 +48,9 @@ function createFriendElement(name) {
     alert('Are you sure you want to remove this friend?');
     newFriend.remove();
     getFriends();
+    deleteNameFromSelect();
     displayErrorMessage('');
+    
   });
   newFriend.appendChild(deleteButton);
   return newFriend;
@@ -206,6 +208,22 @@ function addFriendsToSelect() {
           paidBySelect.remove(k);
         }
       }
+    }
+  }
+}
+
+// Delete name from the paid by select input if the name is removed from the friends list
+function deleteNameFromSelect() {
+  const friends = getFriends();
+  for (let i = 0; i < paidBySelect.options.length; i++) {
+    let optionExists = false;
+    for (let j = 0; j < friends.length; j++) {
+      if (paidBySelect.options[i].value === friends[j].name) {
+        optionExists = true;
+      }
+    }
+    if (!optionExists) {
+      paidBySelect.remove(i);
     }
   }
 }
