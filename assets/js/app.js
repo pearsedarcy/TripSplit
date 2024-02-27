@@ -146,6 +146,7 @@ function submitExpenseForm(event) {
     addExpenseForm.reset();
     displayExpense(newExpense);
     getExpenses();
+    calculateTotalSpent();
   } else {
     alert('Please fill in all the fields');
   }
@@ -227,3 +228,14 @@ function deleteNameFromSelect() {
     }
   }
 }
+
+// Calculate the total cost of all the expenses combined
+function calculateTotalSpent() {
+  const expenses = getExpenses();
+  let totalSpent = 0;
+  for (let i = 0; i < expenses.length; i++) {
+    totalSpent += parseInt(expenses[i].cost);
+  }
+  console.log(totalSpent);
+  return totalSpent;
+} 
