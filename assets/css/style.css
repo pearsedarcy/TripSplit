@@ -150,7 +150,10 @@ input:focus {
 #name-input {
   display: flex;
   justify-content: space-between;
-  gap: 0;
+  gap: 2em;
+}
+#add-friend-input-plus {
+  width: 30px;
 }
 .error-message {
   color: #ff0000;
