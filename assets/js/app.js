@@ -172,9 +172,10 @@ function displayExpense(expense) {
   const expenseList = document.querySelector('.expenses-list');
   const newExpense = document.createElement('li');
   newExpense.innerHTML = `
+    <span class="expense-paid-by">${expense.paidBy}</span>
+    <p class="paid-for">paid for</p>
     <span class="expense-title">${expense.title}</span>
     <span class="expense-cost">${expense.cost}</span>
-    <span class="expense-paid-by">${expense.paidBy}</span>
   `;
   expenseList.appendChild(newExpense);
 }
