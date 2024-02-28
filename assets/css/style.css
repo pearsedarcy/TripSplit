@@ -176,6 +176,22 @@ input:focus {
 }
 #add-friend-input-plus {
   width: 30px;
+  color: #BB86FC;
+  font-weight: 600;
+  font-size: 2em;
+  cursor: pointer;
+  height: fit-content;
+  background-color: #00000000;
+}
+#add-friend-input-plus:hover {
+  transform: scale(1.5);
+  transition: all 0.3s ease;
+  color: blueviolet;
+}
+#add-friend-input-plus:active {
+  transform: scale(0.9);
+  transition: all 0.3s ease;
+  color: #ffffff;
 }
 .error-message {
   color: #ff0000;
