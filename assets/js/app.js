@@ -17,7 +17,7 @@ function submitFriendsForm(event) {
       addFriendsToSelect();
       addFriendInput.value = '';
       errorMessage.textContent = '';
-      niceLabel.style.borderColor = legend.style.color = '#b9b9b9';
+      niceLabels[0].style.borderColor = legends[0].style.color = '#b9b9b9';
     } else {
       displayErrorMessage('You can only add up to 5 friends');
       addFriendInput.value = '';
@@ -63,26 +63,26 @@ function countFriends() {
 function displayErrorMessage(message) {
   errorMessage.textContent = message;
   if (message !== '') {
-    niceLabel.style.borderColor = legend.style.color = 'red';
+    niceLabels[0].style.borderColor = legends[0].style.color = 'red';
   } else {
-    niceLabel.style.borderColor = legend.style.color = '#b9b9b9';
+    niceLabels[0].style.borderColor = legends[0].style.color = '#b9b9b9';
   }
 }
 
 // Change border color of input on focus and blur
 const addFriendsInput = document.getElementById('add-friends-input');
-const niceLabel = document.querySelector('.nice-label');
-const legend = document.querySelector('legend');
-
-addFriendsInput.addEventListener('focus', function() {
-  niceLabel.style.borderColor = legend.style.color =  '#BB86FC';
-});
-
-addFriendsInput.addEventListener('blur', function() {
-  niceLabel.style.borderColor = legend.style.color = '#b9b9b9';
-  displayErrorMessage('');
-});
-
+const niceLabels = document.querySelectorAll('.nice-label');
+const legends = document.querySelectorAll('legend');
+const inputs = document.querySelectorAll('.input-box');
+for (let i = 0; i < inputs.length; i++) {
+  inputs[i].addEventListener('focus', function() {
+    niceLabels[i].style.borderColor = legends[i].style.color =  '#BB86FC';
+  });
+  inputs[i].addEventListener('blur', function() {
+    niceLabels[i].style.borderColor = legends[i].style.color = '#b9b9b9';
+    displayErrorMessage('');
+  });
+}
 // Toggle the Add Friends form visibility and section header with action button
 const addFriendsCompleteBtn = document.getElementById('add-friends-complete-button');
 const addFriendsButton = document.getElementById('add-friends-button');
