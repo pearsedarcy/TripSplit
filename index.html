@@ -84,13 +84,22 @@
     <!-- Expenses Section -->
     <section class="main-section-wrapper" id="expenses-section">
       <!-- Section Header -->
-      <header class="main-section-header" id="expenses-header">
+      <header class="main-section-header" id="add-expenses-header">
         <!-- Section Icon and Title -->
         <div class="section-title">
           <svg xmlns="http://www.w3.org/2000/svg" height="31" fill="white" viewBox="0 -960 960 960" width="31">
               <path d="M240-80q-50 0-85-35t-35-85v-120h120v-560l60 60 60-60 60 60 60-60 60 60 60-60 60 60 60-60v680q0 50-35 85t-85 35H240Zm480-80q17 0 28.5-11.5T760-200v-560H320v440h360v120q0 17 11.5 28.5T720-160ZM360-600v-80h240v80H360Zm0 120v-80h240v80H360Zm320-120q-17 0-28.5-11.5T640-640q0-17 11.5-28.5T680-680q17 0 28.5 11.5T720-640q0 17-11.5 28.5T680-600Zm0 120q-17 0-28.5-11.5T640-520q0-17 11.5-28.5T680-560q17 0 28.5 11.5T720-520q0 17-11.5 28.5T680-480ZM240-160h360v-80H200v40q0 17 11.5 28.5T240-160Zm-40 0v-80 80Z"/>
           </svg>
           <h1>Add Expenses</h1>
+        </div>
+      </header>  
+      <header class="main-section-header" id="expenses-header">
+        <!-- Section Icon and Title -->
+        <div class="section-title">
+          <svg xmlns="http://www.w3.org/2000/svg" height="31" fill="white" viewBox="0 -960 960 960" width="31">
+              <path d="M240-80q-50 0-85-35t-35-85v-120h120v-560l60 60 60-60 60 60 60-60 60 60 60-60 60 60 60-60v680q0 50-35 85t-85 35H240Zm480-80q17 0 28.5-11.5T760-200v-560H320v440h360v120q0 17 11.5 28.5T720-160ZM360-600v-80h240v80H360Zm0 120v-80h240v80H360Zm320-120q-17 0-28.5-11.5T640-640q0-17 11.5-28.5T680-680q17 0 28.5 11.5T720-640q0 17-11.5 28.5T680-600Zm0 120q-17 0-28.5-11.5T640-520q0-17 11.5-28.5T680-560q17 0 28.5 11.5T720-520q0 17-11.5 28.5T680-480ZM240-160h360v-80H200v40q0 17 11.5 28.5T240-160Zm-40 0v-80 80Z"/>
+          </svg>
+          <h1>Expenses</h1>
         </div>
       </header>  
       <!-- Add Expenses Form -->
@@ -125,14 +134,21 @@
       </article>    
     </section>
     <!-- Done Adding Expenses Button -->
-    <button type="submit" form="add-expenses-form" class="action-button">
+    <div id="form-buttons">
+          <!-- Cancel Adding Expenses Button -->
+    <button id="add-expense-cancel-button">
+      X
+      Cancel
+    </button>
+    <button type="submit" form="add-expenses-form" class="action-button" id="add-expense-complete-button">
       <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24">
         <path d="M382-240 154-468l57-57 171 171 367-367 57 57-424 424Z"/>
       </svg>
       Done
     </button>
+  </div>
     <!-- Add Expenses Button -->
-    <button class="action-button" id="add-expenses-button">
+    <button class="action-button" id="add-expense-button">
       <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24">
         <path d="M440-440H200v-80h240v-240h80v240h240v80H520v240h-80v-240Z"/>
       </svg>
