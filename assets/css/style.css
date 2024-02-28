@@ -123,6 +123,9 @@ select {
   padding: 0 0;
   width: 100%;
 }
+select:focus-visible {
+  outline: none !important;
+}
 option {
   background-color: #1E1E1E;
   color: #ffffff;
