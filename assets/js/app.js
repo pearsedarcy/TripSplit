@@ -1,3 +1,5 @@
+
+
 // Get all the Friends List and Friends Form Elements
 const addFriendsForm = document.getElementById('add-friends-form');
 const addFriendInput = document.querySelector('#add-friends-input');
@@ -363,3 +365,89 @@ function displayAmountOwed() {
     balanceList.appendChild(newOwed);
   }
 }
+
+// Add event listeners to li of nav items
+const friendsNavItem = document.getElementById('friends');
+console.log(friendsNavItem);
+const expensesNavItem = document.getElementById('expenses');
+console.log(expensesNavItem);
+const balanceNavItem = document.getElementById('balance');
+console.log(balanceNavItem);
+const totalsNavItem = document.getElementById('totals');
+console.log(totalsNavItem);
+
+friendsNavItem.addEventListener('click', () => {
+  document.querySelector('#friends-section').style.display = 'block';
+  document.querySelector('#expenses-section').style.display = 'none';
+  document.querySelector('#balance-section').style.display = 'none';
+  document.querySelector('#totals-section').style.display = 'none';
+  // if ()
+  // addFriendsCompleteBtn.style.display = 'flex';
+  if (addFriendsForm.style.display === 'flex')
+  { addFriendsCompleteBtn.style.display = 'flex';
+    addFriendsButton.style.display = 'none';}
+  else {addFriendsButton.style.display = 'flex';}
+  friendsNavItem.classList.add('active');
+  expensesNavItem.classList.remove('active');
+  balanceNavItem.classList.remove('active');
+  totalsNavItem.classList.remove('active');
+  addExpenseButton.style.display = 'none';
+  addExpenseCompleteBtn.style.display = 'none';
+});
+
+expensesNavItem.addEventListener('click', () => {
+  document.querySelector('#friends-section').style.display = 'none';
+  document.querySelector('#expenses-section').style.display = 'block';
+  document.querySelector('#balance-section').style.display = 'none';
+  document.querySelector('#totals-section').style.display = 'none';
+  document.querySelector('#form-buttons').style.display = 'flex';
+  if (getExpenses().length < 0) { addExpenseButton.style.display = 'flex'; }
+  if (addExpenseForm.style.display === 'flex')
+  { addExpenseCompleteBtn.style.display = 'flex';
+    cancelExpenseButton.style.display = 'flex';
+    addExpenseButton.style.display = 'none';}
+  else {addFriendsCompleteBtn.style.display = 'none';}
+  // addFriendsButton.style.display = 'none';
+  friendsNavItem.classList.remove('active');
+  expensesNavItem.classList.add('active');
+  balanceNavItem.classList.remove('active');
+  totalsNavItem.classList.remove('active');
+  addFriendsButton.style.display = 'none';
+  if (getExpenses().length > 0) { addExpenseButton.style.display = 'flex'; }
+   else {addExpenseCompleteBtn.style.display = 'flex';}
+}); 
+
+balanceNavItem.addEventListener('click', () => {
+  document.querySelector('#friends-section').style.display = 'none';
+  document.querySelector('#expenses-section').style.display = 'none';
+  document.querySelector('#balance-section').style.display = 'block';
+  document.querySelector('#totals-section').style.display = 'none';
+  addFriendsCompleteBtn.style.display = 'none';
+  addFriendsButton.style.display = 'none';
+  friendsNavItem.classList.remove('active');
+  expensesNavItem.classList.remove('active');
+  balanceNavItem.classList.add('active');
+  totalsNavItem.classList.remove('active');
+  addExpenseCompleteBtn.style.display = 'none';
+  addExpenseButton.style.display = 'none';
+  cancelExpenseButton.style.display = 'none';
+  addFriendsButton.style.display = 'none';
+
+});
+
+totalsNavItem.addEventListener('click', () => {
+  document.querySelector('#friends-section').style.display = 'none';
+  document.querySelector('#expenses-section').style.display = 'none';
+  document.querySelector('#balance-section').style.display = 'none';
+  document.querySelector('#totals-section').style.display = 'block';
+  addFriendsCompleteBtn.style.display = 'none';
+  friendsNavItem.classList.remove('active');
+  expensesNavItem.classList.remove('active');
+  balanceNavItem.classList.remove('active');
+  totalsNavItem.classList.add('active');
+  addExpenseButton.style.display = 'none';
+  addExpenseCompleteBtn.style.display = 'none';
+  cancelExpenseButton.style.display = 'none';
+  addFriendsButton.style.display = 'none';
+
+});
