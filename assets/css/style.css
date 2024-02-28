@@ -121,6 +121,7 @@ select {
   border: none;
   font-size: 1em;
   padding: 0 0;
+  width: 100%;
 }
 option {
   background-color: #1E1E1E;
@@ -152,6 +153,7 @@ input {
   color: #ffffff;
   border: none;
   font-size: 1em;
+  width: 100%;
 }
 input:focus {
   outline: none;
