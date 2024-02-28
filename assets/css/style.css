@@ -255,7 +255,7 @@ footer {
   bottom: 0;
   background-color: #0f0f0f;
   width: 100%;
-  animation: nav-in 0.3s ease-in-out;
+  animation: nav-in 0.3s ease-out;
 }
 /* Nav */
 footer nav ul {
