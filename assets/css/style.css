@@ -139,7 +139,7 @@ option {
 }
 /* Input Label */
 fieldset {
-  border: #b9b9b9 solid 1px;
+  border: #b9b9b9 solid 2px;
   border-radius: 5px;
   display: flex;
   flex-direction: column;
