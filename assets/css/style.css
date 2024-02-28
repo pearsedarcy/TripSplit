@@ -319,3 +319,15 @@ footer nav ul li a{
 #add-expense-cancel-button {
   display: none;
 }
+
+#totals {
+  display: none;
+}
+
+#balance {
+  display: none;
+}
+
+#expenses {
+  display: none;
+}
