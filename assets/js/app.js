@@ -100,7 +100,8 @@ addFriendsCompleteBtn.addEventListener('click', () => {
     addFriendsCompleteBtn.style.display = 'none';
     addFriendsButton.style.display = 'flex';
     friendsListHeader.style.display = 'flex';
-    
+    friendsNavItem.style.display = 'flex';
+    expensesNavItem.style.display = 'flex';
   }
 });
 
@@ -149,6 +150,8 @@ function submitExpenseForm(event) {
     divideTotalSpentByFriends();
     calculateAmountOwed();
     displayAmountOwed();
+    totalsNavItem.style.display = 'flex';
+    balanceNavItem.style.display = 'flex';
   } else {
     alert('Please fill in all the fields');
   }
