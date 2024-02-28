@@ -203,9 +203,9 @@ input:focus {
 
 /* Action words */
 .action-word {
-  font-size: 0.8em;
+  font-size: 1em;
   font-weight: 300;
-  color: #bbbbbb;
+  color: #BB86FC;
 }
 .owed-amount {
   display: flex;
@@ -222,7 +222,7 @@ input:focus {
   font-weight: 600;
   color: #BB86FC;
   display: flex;
-  gap: 2em;
+  gap: 1em;
   align-items: center;
 }
 /* Action buttons */
