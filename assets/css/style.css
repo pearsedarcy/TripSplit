@@ -323,6 +323,13 @@ footer nav ul li a{
     transform: scale(1.1);
     transition: all 0.3s ease;
   }  
+  svg {
+    width: 40px;
+    height: 40px;
+  }
+  footer nav ul li a {
+    font-size: 1rem;
+  }
 }
 /* Hide Sections on Load */
 #expenses-section {
