@@ -173,9 +173,9 @@ function displayExpense(expense) {
   const newExpense = document.createElement('li');
   newExpense.innerHTML = `
     <span class="expense-paid-by">${expense.paidBy}</span>
-    <p class="paid-for">paid for</p>
+    <p class="action-word">paid for</p>
     <span class="expense-title">${expense.title}</span>
-    <span class="expense-cost">${expense.cost}</span>
+    <span class="money">€<span id="expense-cost">${expense.cost}</span></span>
   `;
   expenseList.appendChild(newExpense);
 }
@@ -190,7 +190,7 @@ function getExpenses() {
   for (let i = 0; i < expenseListItems.length; i++) {
     expenses.push({
       expense: expenseListItems[i].querySelector('.expense-title').textContent.trim(),
-      cost: expenseListItems[i].querySelector('.expense-cost').textContent.trim(),
+      cost: expenseListItems[i].querySelector('#expense-cost').textContent.trim(),
       paidBy: expenseListItems[i].querySelector('.expense-paid-by').textContent.trim()
     });
   }
@@ -277,7 +277,7 @@ function displayTotalSpentByEachFriend() {
     newtotals.innerHTML = `
       <span class="totals-name">${TotalSpentByEachFriend[i].name}</span>
       <p class="action-word">has spent</p>
-      <span class="totals-amount">€${TotalSpentByEachFriend[i].total}</span>
+      <span class="money">€${TotalSpentByEachFriend[i].total}</span>
     `;
     totalsList.appendChild(newtotals);
   }
@@ -330,7 +330,7 @@ function displayAmountOwed() {
     const newOwed = document.createElement('li');
     newOwed.innerHTML = `
       <span class="owed-name">${amountOwed[i].name}</span>
-      <span class="owed-amount">${amountOwed[i].total}</span>
+      <span class="owed-amount"><span class="money-owed">${amountOwed[i].total}</span></span>
     `;
     balanceList.appendChild(newOwed);
   }
