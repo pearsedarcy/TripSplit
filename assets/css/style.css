@@ -68,6 +68,9 @@ main {
   justify-content: space-between;
   align-items: center;
 }
+#expenses-header {
+  display: none;
+}
 /* Main Section Title */
 .section-title {
   display: flex;
@@ -207,9 +210,9 @@ input:focus {
 }
 /* Action buttons */
 button {
-  background-color: #BB86FC;
-  color: #000;
-  border: none;
+  background-color: #00000000;
+  color: #ffffff;
+  border: #ffffff solid 1px;
   padding: 0.5em 1em;
   border-radius: 20px;
   cursor: pointer;
@@ -218,6 +221,7 @@ button {
   display: flex;
   align-items: center;
   margin: 1em 0;
+  margin-bottom: 55px;
 }
 button:hover {
   background-color: #a35afd;
@@ -229,7 +233,17 @@ button:hover {
 }
 .action-button {
   align-self: flex-end;
-  margin-bottom: 55px;
+  color: #000000;
+  background-color: #BB86FC;
+  border: none;
+}
+#form-buttons {
+  display: flex;
+  align-self: flex-end;
+  gap: 1em;
+}
+#add-expense-button {
+  display: none;
 }
 #add-friends-button {
   display: none;
