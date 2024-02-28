@@ -313,3 +313,9 @@ footer nav ul li a{
 #form-buttons {
   display: none;
 }
+#add-friends-button {
+  display: none;
+}
+#add-expense-cancel-button {
+  display: none;
+}
