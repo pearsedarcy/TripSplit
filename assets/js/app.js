@@ -50,7 +50,6 @@ function createFriendElement(name) {
     getFriends();
     deleteNameFromSelect();
     displayErrorMessage('');
-    
   });
   newFriend.appendChild(deleteButton);
   return newFriend;
@@ -119,7 +118,6 @@ function getFriends() {
   for (let i = 0; i < friendsListItems.length; i++) {
     friends.push({ name: friendsListItems[i].textContent.trim().slice(0, -1) });
   }
-  console.log(friends);
   return friends;
 }
 
@@ -137,10 +135,7 @@ function submitExpenseForm(event) {
   event.preventDefault();
   const expenseName = expenseNameInput.value.trim();
   const expenseAmount = expenseAmountInput.value.trim();
-  console.log(expenseAmount);
-  console.log(expenseName);
   const paidBy = paidByInput.value.trim();
-  console.log(paidBy);
   if (expenseName !== '' && expenseAmount !== '' && paidBy !== '') {
     const newExpense = createExpenseElement(expenseName, expenseAmount, paidBy);
     addExpenseForm.reset();
@@ -194,7 +189,6 @@ function getExpenses() {
       paidBy: expenseListItems[i].querySelector('.expense-paid-by').textContent.trim()
     });
   }
-  console.log(expenses);
   return expenses;
 }
 
@@ -242,7 +236,6 @@ function calculateTotalSpent() {
   for (let i = 0; i < expenses.length; i++) {
     totalSpent += parseInt(expenses[i].cost);
   }
-  console.log(totalSpent);
   return totalSpent;
 } 
 
@@ -263,7 +256,6 @@ function calculateTotalSpentByEachFriend() {
       total
     });
   }
-  console.log(TotalSpentByEachFriend);
   return TotalSpentByEachFriend;
 }
 
@@ -288,7 +280,6 @@ function divideTotalSpentByFriends() {
   const totalSpent = calculateTotalSpent();
   const friends = getFriends();
   const dividedTotal = (totalSpent / friends.length).toFixed(2);
-  console.log(dividedTotal);
   return dividedTotal;
 }
 
@@ -317,7 +308,6 @@ function calculateAmountOwed() {
       total
     });
   }
-  console.log(amountOwed);
   return amountOwed;
 }
 
