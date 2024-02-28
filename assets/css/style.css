@@ -269,7 +269,7 @@ button:hover {
 footer {
   position: fixed;
   bottom: 0;
-  background-color: #0f0f0f;
+  background-color: #050505;
   width: 100%;
   animation: nav-in 0.3s ease-out;
 }
@@ -280,6 +280,7 @@ footer nav ul {
   align-items: center;
   list-style: none;
   border-top: #BB86FC solid 2px;
+  padding: 0.5em 0;
 }
 /* Nav List */
 .nav-list {
@@ -299,7 +300,6 @@ footer nav ul li a{
   font-size: 0.8rem;
   display: flex;
   flex-direction: column-reverse;
-  margin: 0.5em 0;
   align-items: center;
   fill: #ffffff;
   animation: nav-in 0.5s ease-in-out;
@@ -353,6 +353,7 @@ footer nav ul li a{
 
 #balance {
   display: none;
+  border: blueviolet solid 2px;
 }
 
 #expenses {
