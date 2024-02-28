@@ -89,8 +89,8 @@ const friendsListHeader = document.querySelector('#friends-list-header');
 const addFriendsHeader = document.querySelector('#add-friends-header');
 
 addFriendsCompleteBtn.addEventListener('click', () => {
-  if (countFriends() === 0) {
-    displayErrorMessage('Please add at least one friend');
+  if (countFriends() < 2) {
+    displayErrorMessage('Please add at least two friends');
   } else {
     displayErrorMessage('');
     addFriendsHeader.style.display = 'none';
