@@ -192,6 +192,19 @@ input:focus {
   align-items: center;
   gap: 2em;
 }
+.money {
+  font-size: 1.2em;
+  font-weight: 600;
+  color: #BB86FC;
+}
+.money-owed {
+  font-size: 1.2em;
+  font-weight: 600;
+  color: #BB86FC;
+  display: flex;
+  gap: 2em;
+  align-items: center;
+}
 /* Action buttons */
 button {
   background-color: #BB86FC;
