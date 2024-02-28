@@ -255,6 +255,7 @@ footer {
   bottom: 0;
   background-color: #0f0f0f;
   width: 100%;
+  animation: nav-in 0.3s ease-in-out;
 }
 /* Nav */
 footer nav ul {
@@ -271,7 +272,6 @@ footer nav ul {
   justify-content: space-around;
   align-items: center;
   width: 100%;
-  padding: 0.5em 0;
 }
 .nav-list li {
   background-color: #00000000;
@@ -286,7 +286,15 @@ footer nav ul li a{
   margin: 0.5em 0;
   align-items: center;
   fill: #ffffff;
-  
+  animation: nav-in 0.5s ease-in-out;
+}
+@keyframes nav-in {
+  from {
+    transform: translateY(100%);
+  }
+  to {
+    transform: translateY(0%);
+  }
 }
  .active a {
   color: #BB86FC;
@@ -319,7 +327,10 @@ footer nav ul li a{
 #add-expense-cancel-button {
   display: none;
 }
-
+/* Navigation */
+#friends {
+  display: none;
+}
 #totals {
   display: none;
 }
