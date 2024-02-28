@@ -229,6 +229,44 @@ function deleteNameFromSelect() {
   }
 }
 
+// Toggle the Add Expense form visibility and section header with action button
+
+const addExpenseCompleteBtn = document.getElementById('add-expense-complete-button');
+const addExpenseButton = document.getElementById('add-expense-button');
+const expensesListHeader = document.querySelector('#expenses-header');
+const addExpenseHeader = document.querySelector('#add-expenses-header');
+const cancelExpenseButton = document.getElementById('add-expense-cancel-button');
+
+addExpenseCompleteBtn.addEventListener('click', () => {
+  if (expenseNameInput.value !== '' && expenseAmountInput.value !== '' && paidByInput.value !== '') {
+  addExpenseHeader.style.display = 'none';
+  addExpenseForm.style.display = 'none';
+  addExpenseCompleteBtn.style.display = 'none';
+  cancelExpenseButton.style.display = 'none';
+  addExpenseButton.style.display = 'flex';
+  expensesListHeader.style.display = 'flex';
+}
+});
+
+addExpenseButton.addEventListener('click', () => {
+  addExpenseForm.style.display = 'flex';
+  addExpenseCompleteBtn.style.display = 'flex';
+  cancelExpenseButton.style.display = 'flex';
+  addExpenseButton.style.display = 'none';
+  expensesListHeader.style.display = 'none';
+  addExpenseHeader.style.display = 'flex';
+});
+
+cancelExpenseButton.addEventListener('click', () => {
+  addExpenseHeader.style.display = 'none';
+  addExpenseForm.style.display = 'none';
+  addExpenseCompleteBtn.style.display = 'none';
+  cancelExpenseButton.style.display = 'none';
+  addExpenseButton.style.display = 'flex';
+  expensesListHeader.style.display = 'flex';
+});
+
+
 // Calculate the total cost of all the expenses combined
 function calculateTotalSpent() {
   const expenses = getExpenses();
