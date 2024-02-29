@@ -1,3 +1,4 @@
+
 // Add event listeners to li of nav items
 const friendsNavItem = document.getElementById('friends');
 const expensesNavItem = document.getElementById('expenses');
@@ -436,3 +437,30 @@ function displayAmountOwed() {
     balanceList.appendChild(newOwed);
   }
 }
+
+// Show Introduction Section
+const introductionSection = document.getElementById('introduction-section');
+const getStartedButton = document.getElementById('get-started-button');
+
+// Hide all the other sections
+document.querySelector('#friends-section').style.display = 'none';
+document.querySelector('#expenses-section').style.display = 'none';
+document.querySelector('#balance-section').style.display = 'none';
+
+// Hide all other buttons 
+addExpenseButton.style.display = 'none';
+addExpenseForm.style.display = 'none';
+addExpenseCompleteBtn.style.display = 'none';
+cancelExpenseButton.style.display = 'none';
+addFriendsCompleteBtn.style.display = 'none';
+addFriendsForm.style.display = 'none';
+friendsNavItem.style.display = 'none';
+
+// Show friends section when the get started button is clicked
+getStartedButton.addEventListener('click', () => {
+  introductionSection.style.display = 'none';
+  document.querySelector('#friends-section').style.display = 'flex';
+  friendsNavItem.style.display = 'flex';
+  addFriendsForm.style.display = 'flex';
+  addFriendsCompleteBtn.style.display = 'flex';
+});
