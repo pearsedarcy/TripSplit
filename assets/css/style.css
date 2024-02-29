@@ -22,6 +22,9 @@ body {
 /* Header */
 h2 {
   margin-bottom: 0.5em;
+  display: flex;
+  align-items: center;
+  gap: 0.5em;
 }
 /* Links */
 a {
