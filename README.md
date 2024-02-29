@@ -117,7 +117,7 @@ Using a mobile first approach, I placed the app navigation in the footer element
 
 ## Testing
 
-Throughout the development of this project I continuously tested the website using the [W3C HTML Validator](https://validator.w3.org/nu/?doc=https%3A%2F%2Fpearsedarcy.github.io%2Fm-buildz%2F), The [JigSaw CSS Validator](https://jigsaw.w3.org/css-validator/validator?uri=https%3A%2F%2Fpearsedarcy.github.io%2Fm-buildz%2F&profile=css3svg&usermedium=all&warning=1&vextwarning=&lang=en), and [Google Lighthouse](https://developer.chrome.com/docs/lighthouse). This enabled me to make sure that with every section that was added, the website was tested thoroughly for validity and use on all screens. Below are some screenshots of the final testing of the [deployed website](https://pearsedarcy.github.io/tripsplit/)
+Throughout the development of this project I continuously tested the website using the [W3C HTML Validator](https://validator.w3.org/nu/?doc=https%3A%2F%2Fpearsedarcy.github.io%2Ftripsplit%2F), The [JigSaw CSS Validator](https://jigsaw.w3.org/css-validator/validator?uri=https%3A%2F%2Fpearsedarcy.github.io%2Ftripsplit%2F&profile=css3svg&usermedium=all&warning=1&vextwarning=&lang=en), The [JSHint Validator](https://jshint.com/) and [Google Lighthouse](https://developer.chrome.com/docs/lighthouse). This enabled me to make sure that with every section that was added, the website was tested thoroughly for validity and use on all screens. Below are some screenshots of the final testing of the [deployed website](https://pearsedarcy.github.io/tripsplit/)
 
 ### Lighthouse Tests
 
@@ -137,6 +137,10 @@ Throughout the development of this project I continuously tested the website usi
 
 ![Jigsaw-CSS-Validator](./assets/docs/images/css-validator-check.png)
 
+#### JSHint
+
+![JSHint-validation](./assets/docs/images/)
+
 ### Links Testing
 
 - I tested all links on the website to ensure they worked correctly.
@@ -144,7 +148,7 @@ Throughout the development of this project I continuously tested the website usi
 
 ### Form Testing
 
-- I tested the form to confirm that it would not submit without validating the requirements, such as the correct email address structure.
+- I tested the form to confirm that it would not submit without validating the requirements, such as ensing all fields were filled out in the expense form before submission.
 
 ### Browser Testing
 
@@ -157,12 +161,11 @@ Throughout the development of this project I continuously tested the website usi
 
 ### Bugs
 
-By using Google Lighthouse throughout the development, many bugs were discovered and squashed.
+I found several bugs throughout development, some of which were fixed, some of which have been left unresolved.
 
-1. 
+1. There is at times a rounding error that leaves the total amount owed off by two cent if the total amount is unevenly divided. This is due to the fact that the Javascript floor() method is always rounding down to the nearest integer. So when a number to be divided is recursive, i.e €3.33, the algorithm leads the a rounding error.
 
-2. 
-3. 
+2. The application does not remove a users expense after they have been removed from the friends list. This is less of a bug and more of an unadded feauture due to time constraints.
 
 ## Deployment
 
