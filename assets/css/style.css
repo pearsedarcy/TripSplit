@@ -1,5 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;600&display=swap');
-/* Root Style */
+/* Root Styles */
 * {
   margin: 0;
   padding: 0;
@@ -19,17 +19,25 @@ body {
   align-items: center;
   justify-content: start;
 }
+/* Links */
 a {
   color: #ffffff;
   fill: #ffffff;
   display: flex;
   align-items: center;
 }
+/* Active Link */
+.active a {
+  color: #BB86FC;
+  fill: #BB86FC;
+}
+/* Lists */
 ul {
   display: flex;
   flex-direction: column;
   gap: 1em;
 }
+/* List Items */
 li  {
   background-color: #141414;
   padding: 0.5em;
@@ -38,6 +46,7 @@ li  {
   justify-content: space-between;
   align-items: center;
 }
+/* Article */
 article {
   display: flex;
   flex-direction: column;
@@ -70,7 +79,11 @@ main {
   justify-content: space-between;
   align-items: center;
 }
+/* Expenses Header */
 #expenses-header {
+  display: none;
+}
+#friends-list-header {
   display: none;
 }
 /* Main Section Title */
@@ -91,7 +104,7 @@ main {
   padding: 3em;
   margin-top: 1em;
 }
-
+/* Get Started Button */
 #get-started-button {
   padding: 0.5em 1em;
   border-radius: 30px;
@@ -108,9 +121,6 @@ main {
   align-self: center;
 }
 /* Friends List */
-#friends-list-header {
-  display: none;
-}
 .friends-list-article ul {
   list-style: none;
   display: flex;
@@ -140,12 +150,14 @@ main {
   color: #ffffff;
   order: -1;
 }
+/* Form */
 form {
   margin-top: 1em;
   display: flex;
   flex-direction: column;
   gap: 1em;
 }
+/* Select */
 select {
   height: 40px;
   background-color: #1E1E1E;
@@ -158,12 +170,17 @@ select {
 select:focus-visible {
   outline: none !important;
 }
+/* Option */
 option {
   background-color: #1E1E1E;
   color: #ffffff;
   border: none;
   font-size: 1em;
   padding: 0 1em;
+}
+/* Label */
+label {
+  display: none;
 }
 /* Input Label */
 fieldset {
@@ -174,6 +191,8 @@ fieldset {
   gap: 1em;
   padding: 0 1em 0.3em 1em;
 }
+
+/* Legend */
 legend {
   color: #b9b9b9;
   font-size: 0.8rem;
@@ -181,7 +200,7 @@ legend {
   margin-left: 10px;
   padding: 0 10px;
 }
-/* Input */
+/* Inputs */
 input {
   height: 40px;
   background-color: #1E1E1E;
@@ -221,6 +240,7 @@ input:focus {
   transition: all 0.3s ease;
   color: #ffffff;
 }
+/* Error Message */
 .error-message {
   color: #ff0000;
   font-size: 14px;
@@ -228,7 +248,6 @@ input:focus {
   font-weight: 300;
   margin-left: 1em;
 }
-
 /* Action words */
 .action-word {
   font-size: 1em;
@@ -282,6 +301,7 @@ button:hover {
   background-color: #BB86FC;
   border: none;
 }
+/* Form Buttons */
 #form-buttons {
   display: flex;
   align-self: flex-end;
@@ -332,6 +352,7 @@ footer nav ul li a{
   fill: #ffffff;
   animation: nav-in 0.5s ease-in-out;
 }
+/* Animation */
 @keyframes nav-in {
   from {
     transform: translateY(100%);
@@ -340,9 +361,39 @@ footer nav ul li a{
     transform: translateY(0%);
   }
 }
- .active a {
-  color: #BB86FC;
-  fill: #BB86FC;
+/* Hide Sections on Load */
+#expenses-section {
+  display: none;
+}
+#totals-section {
+  display: none;
+}
+#balance-section {
+  display: none;
+}
+/* Hide Buttons on Load */
+#form-buttons {
+  display: none;
+}
+#add-friends-button {
+  display: none;
+}
+#add-expense-cancel-button {
+  display: none;
+}
+/* Hide Navigation on load */
+#friends {
+  display: none;
+}
+#totals {
+  display: none;
+}
+#balance {
+  display: none;
+  border: blueviolet solid 2px;
+}
+#expenses {
+  display: none;
 }
 @media screen and (min-width: 800px) {
   a:hover {
@@ -359,42 +410,4 @@ footer nav ul li a{
     font-size: 1rem;
   }
 }
-/* Hide Sections on Load */
-#expenses-section {
-  display: none;
-}
-#totals-section {
-  display: none;
-}
-#balance-section {
-  display: none;
-}
-#form-buttons {
-  display: none;
-}
-#add-friends-button {
-  display: none;
-}
-#add-expense-cancel-button {
-  display: none;
-}
-/* Navigation */
-#friends {
-  display: none;
-}
-#totals {
-  display: none;
-}
 
-#balance {
-  display: none;
-  border: blueviolet solid 2px;
-}
-
-#expenses {
-  display: none;
-}
-
-label {
-  display: none;
-}
