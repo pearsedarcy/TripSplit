@@ -75,7 +75,7 @@ When the user clicks get started they are presented with the 'Add Friends' page.
 
 - When a user adds a friend, the app automatically generates a profile picture with a random color and the first letter of the friends name.
 
-- The user can delete a friend from the list and will be prompted with a confirmation notification to confirm deletetion.
+- The user can delete a friend from the list and will be prompted with a confirmation notification to confirm deletion.
 
 ![Add-friends-page-desktop](./assets/docs/images/add-friends-page-desktop.png)
 ![Add-friends-page-mobile](./assets/docs/images/add-friends-page-mobile.png)
@@ -86,9 +86,9 @@ After the user has added at least two friends, the expenses navigation item pops
 
 #### Features
 
-- User can enter the name, cost and who paid for each expense.
+- The user can enter the name, cost and who paid for each expense.
 
-- With every friend added or removed from the friends list, the name is added or removed from the paid by dropdown input.
+- With every friend added or removed from the friend's list, the name is added or removed from the paid by dropdown input.
 
 - The form leverages window alerts to inform users if they attempt to submit an incomplete expense.
 
@@ -100,7 +100,7 @@ After the user has added at least two friends, the expenses navigation item pops
 
 ### Balances Page
 
-Once the user has added there first expense, the balance page navigation item appears in the navigation menu. When clicked, it displays the Balances page, which shows the automatically calculated Balance of which friends owes money, and which friends are owed money.
+Once the user has added their first expense, the balance page navigation item appears in the navigation menu. When clicked, it displays the Balances page, which shows the automatically calculated Balance of which friends owe money, and which friends are owed money.
 
 - Automatically calculates and displays the balance every time a new expense is added.
 
@@ -115,14 +115,14 @@ Once the user has added there first expense, the balance page navigation item ap
 
 ### Page Footer/Navigation
 
-Using a mobile first approach, I placed the app navigation in the footer element, allowing the user to easily switch between sections. Each naviagtion item only appears as it is needed, allowing for intuitive use of the app withoutt the need for instructions. The users is unable to progress through the app unless they fill out the required information.
+Using a mobile firs approach, I placed the app navigation in the footer element, allowing the user to switch between sections easily. Each navigation item only appears as it is needed, allowing for intuitive use of the app without the need for instructions. The users are unable to progress through the app unless they fill out the required information.
 
 ![Page-Footer-Desktop](./assets/docs/images/page-footer-desktop.png)
 ![Page-Footer-Mobile](./assets/docs/images/page-footer-mobile.png)
 
 ## Testing
 
-Throughout the development of this project I continuously tested the website using the [W3C HTML Validator](https://validator.w3.org/nu/?doc=https%3A%2F%2Fpearsedarcy.github.io%2Ftripsplit%2F), The [JigSaw CSS Validator](https://jigsaw.w3.org/css-validator/validator?uri=https%3A%2F%2Fpearsedarcy.github.io%2Ftripsplit%2F&profile=css3svg&usermedium=all&warning=1&vextwarning=&lang=en), The [JSHint Validator](https://jshint.com/) and [Google Lighthouse](https://developer.chrome.com/docs/lighthouse). This enabled me to make sure that with every section that was added, the website was tested thoroughly for validity and use on all screens. Below are some screenshots of the final testing of the [deployed website](https://pearsedarcy.github.io/tripsplit/)
+Throughout the development of this project, I continuously tested the website using the [W3C HTML Validator](https://validator.w3.org/nu/?doc=https%3A%2F%2Fpearsedarcy.github.io%2Ftripsplit%2F), The [JigSaw CSS Validator](https://jigsaw.w3.org/css-validator/validator?uri=https%3A%2F%2Fpearsedarcy.github.io%2Ftripsplit%2F&profile=css3svg&usermedium=all&warning=1&vextwarning=&lang=en), The [JSHint Validator](https://jshint.com/) and [Google Lighthouse](https://developer.chrome.com/docs/lighthouse). This enabled me to make sure that with every section that was added, the website was tested thoroughly for validity and use on all screens. Below are some screenshots of the final testing of the [deployed website](https://pearsedarcy.github.io/tripsplit/)
 
 ### Lighthouse Tests
 
@@ -152,7 +152,7 @@ Throughout the development of this project I continuously tested the website usi
 
 ### Form Testing
 
-- I tested the form to confirm that it would not submit without validating the requirements, such as ensing all fields were filled out in the expense form before submission.
+- I tested the form to confirm that it would not submit without validating the requirements, such as ensuring all fields were filled out in the expense form before submission.
 
 ### Browser Testing
 
@@ -160,22 +160,23 @@ Throughout the development of this project I continuously tested the website usi
 
 ### Responsiveness Testing
 
-- Using Chrome Dev tools, I tested the website to ensure that it scaled and squashed correctly in a variety of screen sizes and aspect ratios.
+- Using Chrome Dev tools, I tested the website to ensure that it scaled and squashed correctly in various screen sizes and aspect ratios.
 - I conducted a final test using [Responsinator](http://www.responsinator.com/?url=https%3A%2F%2Fpearsedarcy.github.io%2Ftripsplit%2F) to validate cross device compatibility.
 
 ### Bugs
 
-I found several bugs throughout development, some of which were fixed, some of which have been left unresolved.
+I found several bugs throughout development which I was unable to resolve.
 
-1. There is at times a rounding error that leaves the total amount owed off by two cent if the total amount is unevenly divided. This is due to the fact that the Javascript floor() method is always rounding down to the nearest integer. So when a number to be divided is recursive, i.e €3.33, the algorithm leads the a rounding error.
+1. There is at times a rounding error that leaves the total amount owed off by two cents if the total amount is unevenly divided. This is because the Javascript floor() method is always rounding down to the nearest integer. So when a number to be divided is recursive, i.e. €3.33, the algorithm leads the a rounding error.
 
-2. The application does not remove a users expense after they have been removed from the friends list. This is less of a bug and more of an unadded feauture due to time constraints.
+2. The application does not allow the removal of expenses after they have been removed from the friends list. This is less of a bug and more of an unadded feature due to time constraints.
+
 
 ## Deployment
 
 The project was deployed using GitHub pages. The steps to deploy using GitHub pages are:
 
-1. Navigate to the [repository](https://github.com/pearsedarcy/trisplt) on GitHub.com.
+1. Navigate to the [repository](https://github.com/pearsedarcy/tripsplit) on GitHub.com.
 2. Click 'Settings' in the page header.
 3. Click 'Pages' in the sidebar navigation.
 4. Click the dropdown under the source heading and select the 'main' branch.
@@ -188,10 +189,11 @@ The Live Link to the website is available [here](https://pearsedarcy.github.io/t
 
 ### Content
 
-- I referenced StackOverFlow, CodePen and MDN WebDocs throughout building the project to help with better understanding and implementing elements, sections and animations
-  - [This](https://developer.mozilla.org/en-US/docs/Web/CSS/Layout_cookbook/Card) MDN Doc was great for the Cards section
-  - [This](https://stackoverflow.com/questions/17296919/how-to-prevent-css3-animation-reset-when-finished) StackOverflow forum helped me with preventing the animations from looping.
-  - [This](https://codepen.io/AdamCCFC/pen/WvzBKq) CodePen example helped me with the hover grow effect on the social media icons.
+- I referenced StackOverFlow, CSS Tricks and MDN WebDocs throughout building the project to help with better understanding and implementing elements, sections
+  - [This](https://developer.mozilla.org/en-US/docs/Web/SVG/Tutorial/Fills_and_Strokes) MDN Doc was great for handling the SVG fills.
+  - [This](https://css-tricks.com/snippets/javascript/random-hex-color/) CSS Tricks article helped me create a random colour.
+  - [This](https://stackoverflow.com/questions/66298570/how-to-put-label-on-input-like-fieldset-of-html-tag) StackOverflow forum helped me with styling the input labels.
+  -[This](https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/blur) MDN Doc helped with the blur function for the inputs.
 
 ### Technologies Used
 
@@ -211,7 +213,7 @@ The Live Link to the website is available [here](https://pearsedarcy.github.io/t
 
 - **Icons**
 
-  - The icons for the website taken from [Google Fonts](https://fonts.google.com/icons)
+  - The icons for the website are taken from [Google Fonts](https://fonts.google.com/icons)
 
 - **Design**
 
