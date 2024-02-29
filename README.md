@@ -173,7 +173,7 @@ I found several bugs throughout development.
 
 #### Unresolved
 
-1. There is at times a rounding error that leaves the total amount owed off by two cents if the total amount is unevenly divided. This is because the Javascript floor() method is always rounding down to the nearest integer. So when a number to be divided is recursive, i.e. €3.33, the algorithm leads the a rounding error.
+1. There is at times a rounding error that leaves the total amount owed off by two cents if the total amount is unevenly divided. This is because the Javascript toFixed() method is always rounding down to the nearest integer. So when a number to be divided is recursive, i.e. €3.33, the algorithm leads the a rounding error.
 
 2. The application does not allow the removal of expenses after they have been removed from the friends list. This is less of a bug and more of an unadded feature due to time constraints.
 
