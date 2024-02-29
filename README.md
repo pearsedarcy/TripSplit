@@ -165,7 +165,13 @@ Throughout the development of this project, I continuously tested the website us
 
 ### Bugs
 
-I found several bugs throughout development which I was unable to resolve.
+I found several bugs throughout development.
+
+#### Resolved
+
+- When deleting a friend from the friend list, an alert would pop up for confirmation using the window.alert() method. However the alert only present the option to press ok and not to cancel. I refactored the function to use the window.confirm() method instead, allowing the user to cancel the deletion if wished.
+
+#### Unresolved
 
 1. There is at times a rounding error that leaves the total amount owed off by two cents if the total amount is unevenly divided. This is because the Javascript floor() method is always rounding down to the nearest integer. So when a number to be divided is recursive, i.e. €3.33, the algorithm leads the a rounding error.
 
