@@ -115,7 +115,7 @@ Once the user has added their first expense, the balance page navigation item ap
 
 ### Page Footer/Navigation
 
-Using a mobile firs approach, I placed the app navigation in the footer element, allowing the user to switch between sections easily. Each navigation item only appears as it is needed, allowing for intuitive use of the app without the need for instructions. The users are unable to progress through the app unless they fill out the required information.
+Using a mobile first approach, I placed the app navigation in the footer element, allowing the user to switch between sections easily. Each navigation item only appears as it is needed, allowing for intuitive use of the app without the need for instructions. The users are unable to progress through the app unless they fill out the required information.
 
 ![Page-Footer-Desktop](./assets/docs/images/page-footer-desktop.png)
 ![Page-Footer-Mobile](./assets/docs/images/page-footer-mobile.png)
@@ -193,7 +193,7 @@ The Live Link to the website is available [here](https://pearsedarcy.github.io/t
   - [This](https://developer.mozilla.org/en-US/docs/Web/SVG/Tutorial/Fills_and_Strokes) MDN Doc was great for handling the SVG fills.
   - [This](https://css-tricks.com/snippets/javascript/random-hex-color/) CSS Tricks article helped me create a random colour.
   - [This](https://stackoverflow.com/questions/66298570/how-to-put-label-on-input-like-fieldset-of-html-tag) StackOverflow forum helped me with styling the input labels.
-  -[This](https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/blur) MDN Doc helped with the blur function for the inputs.
+  - [This](https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/blur) MDN Doc helped with the blur function for the inputs.
 
 ### Technologies Used
 
