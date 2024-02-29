@@ -393,3 +393,7 @@ footer nav ul li a{
 #expenses {
   display: none;
 }
+
+label {
+  display: none;
+}
