@@ -1,9 +1,9 @@
-
 // Add event listeners to li of nav items
 const friendsNavItem = document.getElementById('friends');
 const expensesNavItem = document.getElementById('expenses');
 const balanceNavItem = document.getElementById('balance');
-const totalsNavItem = document.getElementById('totals');
+
+// Add event listeners to the nav items
 friendsNavItem.addEventListener('click', () => {
   addExpenseButton.style.display = 'none';
   cancelExpenseButton.style.display = 'none';
@@ -19,7 +19,6 @@ friendsNavItem.addEventListener('click', () => {
   friendsNavItem.classList.add('active');
   expensesNavItem.classList.remove('active');
   balanceNavItem.classList.remove('active');
-  totalsNavItem.classList.remove('active');
   addExpenseButton.style.display = 'none';
   addExpenseForm.style.display = 'none';
 });
@@ -61,7 +60,6 @@ balanceNavItem.addEventListener('click', () => {
   friendsNavItem.classList.remove('active');
   expensesNavItem.classList.remove('active');
   balanceNavItem.classList.add('active');
-  totalsNavItem.classList.remove('active');
   addExpenseCompleteBtn.style.display = 'none';
   addExpenseButton.style.display = 'none';
   cancelExpenseButton.style.display = 'none';
@@ -231,7 +229,6 @@ function submitExpenseForm(event) {
     divideTotalSpentByFriends();
     calculateAmountOwed();
     displayAmountOwed();
-    // totalsNavItem.style.display = 'flex';
     balanceNavItem.style.display = 'flex';
   } else {
     alert('Please fill in all the fields');
