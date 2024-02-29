@@ -11,7 +11,6 @@ friendsNavItem.addEventListener('click', () => {
   document.querySelector('#friends-section').style.display = 'flex';
   document.querySelector('#expenses-section').style.display = 'none';
   document.querySelector('#balance-section').style.display = 'none';
-  document.querySelector('#totals-section').style.display = 'none';
   if (addFriendsForm.style.display === 'flex')
   { addFriendsCompleteBtn.style.display = 'flex';
     addFriendsButton.style.display = 'none';}
@@ -30,7 +29,6 @@ expensesNavItem.addEventListener('click', () => {
   document.querySelector('#friends-section').style.display = 'none';
   document.querySelector('#expenses-section').style.display = 'flex';
   document.querySelector('#balance-section').style.display = 'none';
-  document.querySelector('#totals-section').style.display = 'none';
   document.querySelector('#form-buttons').style.display = 'flex';
   if (getExpenses().length < 0) { addExpenseButton.style.display = 'flex'; }
   if (addExpenseForm.style.display === 'flex')
@@ -42,7 +40,7 @@ expensesNavItem.addEventListener('click', () => {
   friendsNavItem.classList.remove('active');
   expensesNavItem.classList.add('active');
   balanceNavItem.classList.remove('active');
-  totalsNavItem.classList.remove('active');
+
   addFriendsButton.style.display = 'none';
   addFriendsForm.style.display = 'none';
   addExpenseForm.style.display = 'flex';
@@ -54,7 +52,6 @@ balanceNavItem.addEventListener('click', () => {
   document.querySelector('#friends-section').style.display = 'none';
   document.querySelector('#expenses-section').style.display = 'none';
   document.querySelector('#balance-section').style.display = 'flex';
-  document.querySelector('#totals-section').style.display = 'none';
   addFriendsCompleteBtn.style.display = 'none';
   addFriendsButton.style.display = 'none';
   friendsNavItem.classList.remove('active');
