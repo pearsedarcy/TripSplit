@@ -226,6 +226,7 @@ function submitExpenseForm(event) {
     divideTotalSpentByFriends();
     calculateAmountOwed();
     displayAmountOwed();
+    displayTotalSpent();
     balanceNavItem.style.display = 'flex';
   } else {
     alert('Please fill in all the fields');
@@ -354,6 +355,13 @@ function calculateTotalSpent() {
   return totalSpent; 
 } 
 
+// Display the total amount spent
+function displayTotalSpent() {
+  const totalSpent = calculateTotalSpent();
+  const totalSpentElement = document.querySelector('#total-spent');
+  totalSpentElement.textContent = `Total Spent: €${totalSpent}`;
+}
+
 // Calculate the total amount each friend has spent
 function calculateTotalSpentByEachFriend() {
   const friends = getFriends();
@@ -373,6 +381,8 @@ function calculateTotalSpentByEachFriend() {
   }
   return TotalSpentByEachFriend;
 }
+
+
 
 // Display the TotalSpentByEachFriend
 function displayTotalSpentByEachFriend() {
