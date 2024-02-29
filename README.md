@@ -2,37 +2,39 @@
 
 TripSplit is a web application that helps you to split the expenses of a trip with your friends.
 
+The user can add their friends into a group, add any expenses they might like to share among the group, who paid for each expense, and TripSplit will calculate how much each friend owes one another.
+
 ![README Cover Image](./assets/docs/images/cover-picture.png)
 
 ## [Link to Live site](https://pearsedarcy.github.io/tripsplit/)
 
 ## Project Goals
 
-Build a web application that allows users record all the expenses of a trip, who paid for what, and then to automatically split the expenses between each friend.
+The primary goal of TripSplit is to develop a user-friendly web application that facilitates efficient management and equitable distribution of trip expenses among friends. By automating the process of expense tracking and splitting, TripSplit aims to enhance the overall travel experience and promote financial transparency and fairness within friend groups.
 
 ## User Stories
 
-  - I want to take note off all the expenses of a trip with my friends
-  - I want to take note of who paid for what
-  - I want to divide the costs between the group so that everyone pays the same amount
+  - I want to take note off all the expenses of a trip with my friends.
+  - I want to take note of who paid for what.
+  - I want to seemlessly and automatically divide the costs between the group so that     everyone pays the same amount.
 
 
 ## Initial Design Considerations
 
 ### Figma Sketches
 
-To design to basic layout and structure of the web app I built a basic design concept in [Figma](https://figma.com), a popular online design service.
+In the initial design phase, [Figma](https://figma.com) was utilized to create wireframes,  outlining the layout and structure of the web application. Adopting a mobile-first approach, the design prioritized usability and accessibility across various devices.
 
 #### Mobile Page Structure
 
 Using a mobile-first approach when beginning with this design was of great importance. 
 Considering it would most likely be used while on holidays, it is safe to assume the majority of the users will be on mobile.
-![Mobile-Figma]()
+![Figma-wireframe](./assets/docs/images/figma-wireframe.png)
+![Figma-final](./assets/docs/images/figma-final.png)
 
 #### Desktop Page Structure
 
-To simplify the build process, I stuck to a scaled version of the mobile app for desktop and tablets. 
-![Desktop-Figma]()
+To simplify the build process, I used a scaled version of the mobile app for desktop and tablets, leading to a modern and intuitive look and feel.
 
 ## Design Language
 
@@ -40,55 +42,78 @@ I used Googles [M3 Material Design](https://m3.material.io/) as a basis for my d
 
 ### Color Choice
 
-I used googles dark theme to choose the pallete for the app, using a gradient of greys and a purple to highlight important information.
+I used googles dark theme to choose the pallete for the app, using a gradient of greys for visual hierarcy and a purple to highlight important information.
 
 ### Fonts
 
-I used Google's popular 'Roboto' font as the typeface for this project.
-
+The ubiquitous 'Roboto' font from Google was selected as the primary typeface for its versatility, readability, and widespread acceptance. Its balanced proportions and distinct characters contribute to a polished and professional aesthetic.
 
 ### Iconography
 
-The icons used on the website were taken from google fonts Icon library (link).
-Rather than hyperlinking them I decided to insert them as SVG's for better responsiveness and flexibilty.
+Icons sourced from [Google Fonts' Icon library](https://fonts.google.com/icons) were integrated into the design, leveraging SVG format to ensure responsiveness and flexibility. This decision not only enhances visual appeal but also optimizes performance across varying screen sizes and resolutions.
 
 ## Section Dissection
 
 Here is a breakdown of each of the elements of the website.
 
+### Welcome Page 
+
+A welcome page was implemented to inform the user as to what the purpose of the web app was for. In testing, it was found that the simple introduction was sufficient to inform and prepare the user to be able to intuitivly navigate the application.
+
+![Welcome-page-desktop]()
+![Welcome-page-mobile]()
+
+### Add Friends Page
+
+When the user clicks get started they are presented with the 'Add Friends' page. This page contains an interactive form, that allows users to add a list of their friends to the group to share expenses with. 
+
+#### Features
+
+- Form shows errors if the user attempts fails to add at least two friends, or tries to submit an empty form.
+
+- User is only allowed to add up to five friends to the group.
+
+- When a user adds a friend, the app automatically generates a profile picture with a random color and the first letter of the friends name.
+
+- The user can delete a friend from the list and will be prompted with a confirmation notification to confirm deletetion.
+
+![Add-friends-page]()
+### Add Expenses Page
+
+After the user has added at least two friends, the expenses navigation item pops up in the nav bar. When it is clicked, the user is presented with the add expenses form, where they can record any expense they would like to split between the group.
+
+#### Features
+
+- User can enter the name, cost and who paid for each expense.
+
+- With every friend added or removed from the friends list, the name is added or removed from the paid by dropdown input.
+
+- The form leverages window alerts to inform users if they attempt to submit an incomplete expense.
+
+- Every expense is recorded and listed in the Expenses list below the form
+
+![Add-expenses-page]()
+
+### Balances Page
+
+Once the user has added there first expense, the balance page navigation item appears in the navigation menu. When clicked, it displays the Balances page, which shows the automatically calculated Balance of which friends owes money, and which friends are owed money.
+
+- Automatically calculates and displays the balance every time a new expense is added.
+
+- Shows who owes money
+
+- Shows who is owed money
+
+- Shows if the balance is settled by equal expenditure
+
+![Balances-page]()
 
 ### Page Footer/Navigation
 
-Using a mobile first approach, I placed the app navigation in the footer element, allowing the user to easily switch between sections.
+Using a mobile first approach, I placed the app navigation in the footer element, allowing the user to easily switch between sections. Each naviagtion item only appears as it is needed, allowing for intuitive use of the app withoutt the need for instructions. The users is unable to progress through the app unless they fill out the required information.
 
 ![Page-Footer-Desktop]()
 ![Page-Footer-Mobile]()
-
-
-### Friends Section
-
-The friends section consists of a form and a list
-
-Errors
-
-Interactivity
-
-![Friends-Section]()
-![Friends-Section]()
-
-### Expenses Section
-
-The expenses section consists of a form and a list
-
-![Expenses-Section]()
-![Expenses-Section]()
-
-### Balances Section
-
-Contains a list which displays totals and how much each friend owes or is owed
-
-![Balances-Section]()
-![Balances-Section]()
 
 ## Testing
 
