@@ -98,19 +98,19 @@ Throughout the development of this project I continuously tested the website usi
 
 ##### Desktop
 
-![Desktop-Lighthouse-Test]()
+![Desktop-Lighthouse-Test](./assets/docs/images/cover-picture.png)
 
 #### Mobile
 
-![Mobile-Lighthouse-Test]()
+![Mobile-Lighthouse-Test](./assets/docs/images/lighthouse-mobile-check.png)
 
 #### W3C HTML Validator
 
-![W3C-HTML-Validator]()
+![W3C-HTML-Validator](./assets/docs/images/html-validator-check.png)
 
 #### Jigsaw CSS Validator
 
-![Jigsaw-CSS-Validator]()
+![Jigsaw-CSS-Validator](./assets/docs/images/css-validator-check.png)
 
 ### Links Testing
 
@@ -128,7 +128,7 @@ Throughout the development of this project I continuously tested the website usi
 ### Responsiveness Testing
 
 - Using Chrome Dev tools, I tested the website to ensure that it scaled and squashed correctly in a variety of screen sizes and aspect ratios.
-- I conducted a final test using [Responsinator]() to validate cross device compatibility.
+- I conducted a final test using [Responsinator](http://www.responsinator.com/?url=https%3A%2F%2Fpearsedarcy.github.io%2Ftripsplit%2F) to validate cross device compatibility.
 
 ### Bugs
 
