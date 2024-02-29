@@ -107,6 +107,7 @@ function createFriendElement(name) {
   // Add a profile picture to the friend element
   const profilePicture = document.createElement('div');
   profilePicture.classList.add('profile-picture');
+  // The random color algorithm is from https://css-tricks.com/snippets/javascript/random-hex-color/
   profilePicture.style.backgroundColor = `#${Math.floor(Math.random()*16777215).toString(16)}`;
   profilePicture.textContent = name.charAt(0).toUpperCase();
   newFriend.appendChild(profilePicture);
