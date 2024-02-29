@@ -19,6 +19,10 @@ body {
   align-items: center;
   justify-content: start;
 }
+/* Header */
+h2 {
+  margin-bottom: 0.5em;
+}
 /* Links */
 a {
   color: #ffffff;
@@ -61,6 +65,7 @@ main {
   width: 100%;
   padding: 1em;
   max-width: 600px;
+  margin-bottom: 40px;
 }
 /* Main Section Wrapper */
 .main-section-wrapper {
@@ -365,7 +370,7 @@ footer nav ul li a{
     transform: translateY(0%);
   }
 }
-/* Hide Sections on Load */
+/*Sections*/
 #expenses-section {
   display: none;
 }
@@ -374,6 +379,7 @@ footer nav ul li a{
 }
 #balance-section {
   display: none;
+  margin-bottom: 60px;
 }
 /* Hide Buttons on Load */
 #form-buttons {
