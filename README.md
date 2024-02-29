@@ -144,12 +144,11 @@ Throughout the development of this project I continuously tested the website usi
 
 #### JSHint
 
-![JSHint-validation](./assets/docs/images/)
+![JSHint-validation](./assets/docs/images/jshint-validation.png)
 
 ### Links Testing
 
 - I tested all links on the website to ensure they worked correctly.
-- I tested all external links to ensure that they would open in a new tab.
 
 ### Form Testing
 
