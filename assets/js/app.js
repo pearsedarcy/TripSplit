@@ -139,20 +139,32 @@ function displayErrorMessage(message) {
   }
 }
 
-// Change border color of input on focus and blur
-const addFriendsInput = document.getElementById('add-friends-input');
-const niceLabels = document.querySelectorAll('.nice-label');
-const legends = document.querySelectorAll('legend');
-const inputs = document.querySelectorAll('.input-box');
-for (let i = 0; i < inputs.length; i++) {
-  inputs[i].addEventListener('focus', function() {
-    niceLabels[i].style.borderColor = legends[i].style.color =  '#BB86FC';
-  });
-  inputs[i].addEventListener('blur', function() {
-    niceLabels[i].style.borderColor = legends[i].style.color = '#b9b9b9';
-    displayErrorMessage('');
+function handleInputFocus(input, niceLabel, legend) {
+  input.addEventListener('focus', function() {
+    niceLabel.style.borderColor = legend.style.color = '#BB86FC'; 
   });
 }
+
+// Function to handle input blur event
+function handleInputBlur(input, niceLabel, legend) {
+  input.addEventListener('blur', function() {
+    niceLabel.style.borderColor = legend.style.color = '#b9b9b9'; 
+    displayErrorMessage(''); 
+  });
+}
+
+// Get references to input elements, nice labels, and legends
+var addFriendsInput = document.getElementById('add-friends-input');
+var niceLabels = document.querySelectorAll('.nice-label');
+var legends = document.querySelectorAll('legend');
+var inputs = document.querySelectorAll('.input-box');
+
+// Iterate through inputs and attach focus and blur event listeners
+for (var i = 0; i < inputs.length; i++) {
+  handleInputFocus(inputs[i], niceLabels[i], legends[i]);
+  handleInputBlur(inputs[i], niceLabels[i], legends[i]);
+}
+
 // Toggle the Add Friends form visibility and section header with action button
 const addFriendsCompleteBtn = document.getElementById('add-friends-complete-button');
 const addFriendsButton = document.getElementById('add-friends-button');
@@ -183,7 +195,6 @@ addFriendsButton.addEventListener('click', () => {
 });
 
 // Loop through the Friends list items and add the names to the friends array
-const friends = [];
 function getFriends() {
   const friends = [];
   const friendsListItems = document.querySelectorAll('.friends-list li');
@@ -248,9 +259,6 @@ function displayExpense(expense) {
   `;
   expenseList.appendChild(newExpense);
 }
-
-// Create an array to store the expense details
-const expenses = [];
 
 // Add the expense details to the expenses array
 function getExpenses() {
