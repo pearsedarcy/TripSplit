@@ -154,7 +154,6 @@ function handleInputBlur(input, niceLabel, legend) {
 }
 
 // Get references to input elements, nice labels, and legends
-var addFriendsInput = document.getElementById('add-friends-input');
 var niceLabels = document.querySelectorAll('.nice-label');
 var legends = document.querySelectorAll('legend');
 var inputs = document.querySelectorAll('.input-box');
