@@ -112,7 +112,7 @@ function createFriendElement(name) {
   `;
   // Add event listener to the delete button
   deleteButton.addEventListener('click', () => {
-    if (confirm(true)) {
+    if (confirm('Are you sure you want to remove this friend?')) {
       newFriend.remove();
       getFriends();
       deleteNameFromSelect();
