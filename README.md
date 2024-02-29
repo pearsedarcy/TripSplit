@@ -60,8 +60,8 @@ Here is a breakdown of each of the elements of the website.
 
 A welcome page was implemented to inform the user as to what the purpose of the web app was for. In testing, it was found that the simple introduction was sufficient to inform and prepare the user to be able to intuitivly navigate the application.
 
-![Welcome-page-desktop]()
-![Welcome-page-mobile]()
+![Welcome-page-desktop](./assets/docs/images/welcome-page-desktop.png)
+![Welcome-page-mobile](./assets/docs/images/welcome-page-mobile.png)
 
 ### Add Friends Page
 
@@ -77,7 +77,9 @@ When the user clicks get started they are presented with the 'Add Friends' page.
 
 - The user can delete a friend from the list and will be prompted with a confirmation notification to confirm deletetion.
 
-![Add-friends-page]()
+![Add-friends-page-desktop](./assets/docs/images/add-friends-page-desktop.png)
+![Add-friends-page-mobile](./assets/docs/images/add-friends-page-mobile.png)
+
 ### Add Expenses Page
 
 After the user has added at least two friends, the expenses navigation item pops up in the nav bar. When it is clicked, the user is presented with the add expenses form, where they can record any expense they would like to split between the group.
@@ -92,7 +94,9 @@ After the user has added at least two friends, the expenses navigation item pops
 
 - Every expense is recorded and listed in the Expenses list below the form
 
-![Add-expenses-page]()
+![Add-expenses-page-desktop](./assets/docs/images/add-expenses-page-desktop.png)
+![Add-expenses-page-mobile](./assets/docs/images/add-expenses-page-mobile.png)
+
 
 ### Balances Page
 
@@ -106,14 +110,15 @@ Once the user has added there first expense, the balance page navigation item ap
 
 - Shows if the balance is settled by equal expenditure
 
-![Balances-page]()
+![Balances-page-desktop](./assets/docs/images/balances-page-desktop.png)
+![Balances-page-mobile](./assets/docs/images/balances-page-mobile.png)
 
 ### Page Footer/Navigation
 
 Using a mobile first approach, I placed the app navigation in the footer element, allowing the user to easily switch between sections. Each naviagtion item only appears as it is needed, allowing for intuitive use of the app withoutt the need for instructions. The users is unable to progress through the app unless they fill out the required information.
 
-![Page-Footer-Desktop]()
-![Page-Footer-Mobile]()
+![Page-Footer-Desktop](./assets/docs/images/page-footer-desktop.png)
+![Page-Footer-Mobile](./assets/docs/images/page-footer-mobile.png)
 
 ## Testing
 
