@@ -2,7 +2,7 @@
 
 TripSplit is a web application that helps you to split the expenses of a trip with your friends.
 
-![README Cover Image]()
+![README Cover Image](./assets/docs/images/cover-picture.png)
 
 ## [Link to Live site](https://pearsedarcy.github.io/tripsplit/)
 
@@ -98,7 +98,7 @@ Throughout the development of this project I continuously tested the website usi
 
 ##### Desktop
 
-![Desktop-Lighthouse-Test](./assets/docs/images/cover-picture.png)
+![Desktop-Lighthouse-Test](./assets/docs/images/lighthouse-desktop-check.png)
 
 #### Mobile
 
