@@ -46,7 +46,7 @@ I used googles dark theme to choose the pallete for the app, using a gradient of
 
 ### Fonts
 
-The ubiquitous 'Roboto' font from Google was selected as the primary typeface for its versatility, readability, and widespread acceptance. Its balanced proportions and distinct characters contribute to a polished and professional aesthetic.
+The ubiquitous ['Roboto'](https://fonts.google.com/specimen/Roboto) font from Google was selected as the primary typeface for its versatility, readability, and widespread acceptance. Its balanced proportions and distinct characters contribute to a polished and professional aesthetic.
 
 ### Iconography
 
@@ -58,7 +58,7 @@ Here is a breakdown of each of the elements of the website.
 
 ### Welcome Page 
 
-A welcome page was implemented to inform the user as to what the purpose of the web app was for. In testing, it was found that the simple introduction was sufficient to inform and prepare the user to be able to intuitivly navigate the application.
+A welcome page was implemented to inform the user as to what the purpose of the web app was for. In testing, it was found that the simple introduction was sufficient to inform and prepare the user to be able to intuitively navigate the application.
 
 ![Welcome-page-desktop](./assets/docs/images/welcome-page-desktop.png)
 ![Welcome-page-mobile](./assets/docs/images/welcome-page-mobile.png)
