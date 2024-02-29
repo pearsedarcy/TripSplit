@@ -1,4 +1,8 @@
-// Add event listeners to li of nav items
+/*
+  The following code is for the navigation elements
+*/
+
+// Get Nav Items
 const friendsNavItem = document.getElementById('friends');
 const expensesNavItem = document.getElementById('expenses');
 const balanceNavItem = document.getElementById('balance');
@@ -63,6 +67,10 @@ balanceNavItem.addEventListener('click', () => {
   addFriendsButton.style.display = 'none';
   addFriendsForm.style.display = 'none';
 });
+
+/*
+  The following code is for the Friends List and Add Friends Form
+*/
 
 // Get all the Friends List and Friends Form Elements
 const addFriendsForm = document.getElementById('add-friends-form');
@@ -136,9 +144,14 @@ function displayErrorMessage(message) {
   }
 }
 
+/* 
+  The following code is for input focus and blur events
+*/
+
+// Change border color and legend color on focus
 function handleInputFocus(input, niceLabel, legend) {
   input.addEventListener('focus', function() {
-    niceLabel.style.borderColor = legend.style.color = '#BB86FC'; // Change border color and legend color on focus
+    niceLabel.style.borderColor = legend.style.color = '#BB86FC';
   });
 }
 
@@ -167,6 +180,7 @@ const addFriendsButton = document.getElementById('add-friends-button');
 const friendsListHeader = document.querySelector('#friends-list-header');
 const addFriendsHeader = document.querySelector('#add-friends-header');
 
+// Add Event Listeners to the buttons
 addFriendsCompleteBtn.addEventListener('click', () => {
   if (countFriends() < 2) {
     displayErrorMessage('Please add at least two friends');
@@ -199,6 +213,10 @@ function getFriends() {
   }
   return friends;
 }
+
+/*
+  The following code is for the Expenses List and Add Expenses Form
+*/
 
 // Handle Add Expense Form Submission
 const addExpenseForm = document.getElementById('add-expenses-form');
@@ -270,7 +288,6 @@ function getExpenses() {
   return expenses;
 }
 
-
 // Dynamically add the friends to the paid by select input
 const paidBySelect = document.getElementById('expense-paid-by-input');
 function addFriendsToSelect() {
@@ -308,13 +325,13 @@ function deleteNameFromSelect() {
 }
 
 // Toggle the Add Expense form visibility and section header with action button
-
 const addExpenseCompleteBtn = document.getElementById('add-expense-complete-button');
 const addExpenseButton = document.getElementById('add-expense-button');
 const expensesListHeader = document.querySelector('#expenses-header');
 const addExpenseHeader = document.querySelector('#add-expenses-header');
 const cancelExpenseButton = document.getElementById('add-expense-cancel-button');
 
+// Add Event Listeners to the Expense Form buttons
 addExpenseCompleteBtn.addEventListener('click', () => {
   if (expenseNameInput.value !== '' && expenseAmountInput.value !== '' && paidByInput.value !== '') {
   addExpenseHeader.style.display = 'none';
@@ -344,6 +361,9 @@ cancelExpenseButton.addEventListener('click', () => {
   expensesListHeader.style.display = 'flex';
 });
 
+/*
+  The following code is for the Balance Section
+*/
 
 // Calculate the total cost of all the expenses combined
 function calculateTotalSpent() {
@@ -382,8 +402,6 @@ function calculateTotalSpentByEachFriend() {
   return TotalSpentByEachFriend;
 }
 
-
-
 // Display the TotalSpentByEachFriend
 function displayTotalSpentByEachFriend() {
   const TotalSpentByEachFriend = calculateTotalSpentByEachFriend();
@@ -400,7 +418,7 @@ function displayTotalSpentByEachFriend() {
   }
 }
 
-// divide the total amount spent by the number of friends
+// Divide the total amount spent by the number of friends
 function divideTotalSpentByFriends() {
   const totalSpent = calculateTotalSpent();
   const friends = getFriends();
@@ -450,6 +468,11 @@ function displayAmountOwed() {
     balanceList.appendChild(newOwed);
   }
 }
+
+/*
+  The following code is for the introduction section
+  and the get started button
+*/
 
 // Show Introduction Section
 const introductionSection = document.getElementById('introduction-section');
