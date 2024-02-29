@@ -141,7 +141,7 @@ function displayErrorMessage(message) {
 
 function handleInputFocus(input, niceLabel, legend) {
   input.addEventListener('focus', function() {
-    niceLabel.style.borderColor = legend.style.color = '#BB86FC'; 
+    niceLabel.style.borderColor = legend.style.color = '#BB86FC'; // Change border color and legend color on focus
   });
 }
 
@@ -154,12 +154,12 @@ function handleInputBlur(input, niceLabel, legend) {
 }
 
 // Get references to input elements, nice labels, and legends
-var niceLabels = document.querySelectorAll('.nice-label');
-var legends = document.querySelectorAll('legend');
-var inputs = document.querySelectorAll('.input-box');
+const niceLabels = document.querySelectorAll('.nice-label');
+const legends = document.querySelectorAll('legend');
+const inputs = document.querySelectorAll('.input-box');
 
 // Iterate through inputs and attach focus and blur event listeners
-for (var i = 0; i < inputs.length; i++) {
+for (let i = 0; i < inputs.length; i++) {
   handleInputFocus(inputs[i], niceLabels[i], legends[i]);
   handleInputBlur(inputs[i], niceLabels[i], legends[i]);
 }
