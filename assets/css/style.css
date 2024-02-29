@@ -313,6 +313,10 @@ button:hover {
 #add-friends-button {
   display: none;
 }
+/* Total Spent */
+#total-spent {
+  margin-top: 1em;
+}
 /* Footer */
 footer {
   position: fixed;
